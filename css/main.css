@@ -1,0 +1,325 @@
+/* Reseteo básico de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+  font-family: 'DM Sans', sans-serif;/* Tipografía */
+  line-height: 1.6;/* Espaciado entre líneas */
+  color: #333; /* Color del texto */
+  background-color: rgb(255, 255, 255);
+}
+.inicio-container {
+  background-image: url('cadira2.png'); /* Ruta de la imagen de fondo */
+  width: 100%; /* Ocupa todo el ancho de la página */
+  min-height: calc(100vh - 80px); /* Ocupa al menos toda la altura de la ventana menos la altura del header */
+  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-position: top center; /* Asegura que la imagen comience desde la parte superior */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  padding: 20px; /* Espacio alrededor del contenido */
+}
+
+/* Estilos para el header */
+header {
+  background-color: white;
+  padding: 5px;/* Espaciado interno */
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  position: relative;
+  margin: 25px;
+  margin-bottom: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1; 
+}
+
+/* Estilo para el logo */
+.logo {
+  max-width: 100px;/* Ajustar el tamaño máximo del logo (más pequeño) */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin-right: 20px; /* Espacio a la derecha del logo */
+  margin-left: 20px; 
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para el nav */
+nav {
+  flex-grow: 1;
+  /* Permite que el nav ocupe el espacio restante */
+  text-align: center;
+  /* Centrar el contenido dentro del nav */
+}
+
+nav ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  display: inline-flex;/* Elementos en línea */
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaciado entre enlaces */
+}
+
+nav ul li a {
+  color: #333; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para el main */
+main {
+  padding: 20px;/* Espaciado interno */
+  z-index: 1; /* Asegura que el header esté por encima del fondo */
+}
+
+/* Estilos para el hero */
+#hero {
+  background-size: cover; /* Cubrir toda el área */
+  background-position: center; /* Centrar la imagen */
+  padding: 10px; /* Espaciado interno */
+  text-align: left;/* Alinear texto a la izquierda */
+  margin-left: 50px;
+  text-align: left;
+}
+
+#hero h2 {
+  font-size: 3.875rem;
+  /* Tamaño de fuente más grande */
+  line-height: 1.2;
+  /* Espacio entre líneas */
+  margin-bottom: 40px;
+  /* Espaciado vertical */
+  color: black;
+  /* Color del texto en negro */
+}
+
+#hero p {
+  font-size: 1.125 rem;
+  color: #5C5C5C;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center; 
+  margin-top: 30px; 
+}
+
+.CTA {
+  background-color: #B11CAB; /* Color de fondo */
+  color: white; /* Color del texto en blanco */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  padding:  20px 40px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto al pasar el mouse */
+.CTA:hover {
+  background-color: #9E0A9B; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Estilos para el cuadro del teléfono */
+.phone-box {
+  background-color: #f2722352; /* Color de fondo naranja */
+  width: 62px; /* Ancho del cuadro */
+  height: 62px; /* Alto del cuadro */
+  display: flex; /* Disposición en fila */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-left: 28px;
+  margin-right: 20px;
+}
+
+/* Estilos para el ícono del teléfono */
+.phone-icon {
+  width: 30px; /* Ancho del ícono */
+  height: auto; /* Alto del ícono */
+}
+/* Contenedor para la información del teléfono */
+.phone-info {
+  display: flex; /* Usar flexbox para disposición vertical */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: flex-start; /* Alinear a la izquierda */
+}
+/* Estilos para el texto del teléfono */
+.phone-label {
+  color: #B11CAB; /* Color del texto */
+  font-size: 1rem; /* Tamaño de fuente del texto */
+  font-weight: bold;
+}
+.phone-number {
+  color: black; /* Color del texto */
+  font-size: 1rem; /* Tamaño de fuente del texto */
+}
+
+/* LinkedIn card */
+.profile-card {
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.233);
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: flex-start; /* Alinear al principio (arriba) */
+  margin-top: 40px; /* Margen superior para separación */
+  margin-bottom: 40px; /* Margen superior para separación */
+  max-width: 440px; /* Limitar el ancho de la card */
+  margin-left: 60px; /* Alinear con el CTA */
+  flex-direction: row; /* Colocar elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+}
+
+.profile-image {
+  width: 41px; /* Ancho de la imagen */
+  height: 41px; /* Alto de la imagen */
+  border-radius: 50%; /* Imagen circular */
+  margin-right: 15px; /* Espacio a la derecha de la imagen */
+}
+
+.profile-info {
+  flex-grow: 1; /* Permitir que ocupe el espacio restante */
+}
+
+.profile-name {
+  margin: 0; /* Sin margen */
+  font-size: 0.9rem; /* Tamaño de fuente del nombre */
+}
+
+.profile-job {
+  margin: 0; /* Sin margen */
+  color: #B11CAB;
+  font-size: 0.7rem; 
+}
+
+.linkedin-icon {
+  display: flex; /* Usar flex para alinear el icono */
+  align-items: center; /* Centrar verticalmente */
+  margin-left: auto; /* Empujar el icono a la derecha */
+}
+
+.linkedin-img {
+  width: 24px; /* Ancho del icono */
+  height: 24px; /* Alto del icono */
+}
+
+.profile-description {
+  margin-top: 20px; /* Margen superior para separación */
+  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+  color: #555; /* Color gris para la descripción */
+  margin-left: -50px;
+}
+
+
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  /* Color de fondo del footer */
+  color: white;
+  /* Color del texto en el footer */
+  text-align: center;
+  /* Alineación centrada */
+  padding: 10px;
+  /* Espaciado interno */
+  position: relative;
+  /* Posición relativa */
+  bottom: 0;
+  /* Posición al fondo */
+  width: 100%;
+  /* Ancho completo */
+}
+
+/* Media queries para hacer la página responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+    /* Ajustar padding en pantallas pequeñas */
+    margin: 30px;
+    /* Ajustar margen en pantallas pequeñas */
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    /* Ajustar margen en pantallas pequeñas */
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+    /* Ajustar tamaño de fuente en pantallas pequeñas */
+  }
+
+  #hero {
+    margin: 0px;
+    /* Ajustar margen en pantallas pequeñas */
+  }
+
+  .profile-card {
+    align-items: center;
+    margin-left: 10px;
+    max-width: 100%;
+    margin-right: 15px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+  .profile-description {
+    margin-top: 20px; /* Margen superior para separación */
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    color: #555; /* Color gris para la descripción */
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    /* Ajustar padding en pantallas muy pequeñas */
+    margin: 5px;
+    /* Ajustar margen en pantallas muy pequeñas */
+  }
+
+  nav ul {
+    flex-direction: column;
+    /* Cambiar a columna en pantallas pequeñas */
+  }
+
+  nav ul li {
+    margin: 5px 0;
+    /* Ajustar margen entre elementos */
+  }
+
+  #hero h2 {
+    font-size: 1.5rem;
+    /* Ajustar aún más en pantallas muy pequeñas */
+  }
+
+  #hero {
+    margin: 5px;
+    /* Ajustar margen en pantallas muy pequeñas */
+  }
+
+  #hero p {
+    font-size: 0.9rem;
+    /* Ajustar aún más en pantallas muy pequeñas */
+  }
+
+  .profile-card {
+    gap: 15px;
+  }
+
+  .profile-image {
+    width: 90px;
+    height: 90px;
+  }
+}
