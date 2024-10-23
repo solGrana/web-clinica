@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;/* Tipografía */
 }
 
 /* Estilos para el body */
 body {
-  font-family: 'DM Sans', sans-serif;/* Tipografía */
   line-height: 1.6;/* Espaciado entre líneas */
   color: #333; /* Color del texto */
   background-color: rgb(255, 255, 255);
@@ -27,15 +27,16 @@ header {
   background-color: white;
   padding: 5px;/* Espaciado interno */
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
   position: relative;
-  margin: 25px;
+  margin: 20px;
   margin-bottom: 40px;
   margin-left: 80px;
   margin-right: 80px;
   display: flex;
   align-items: center;
   z-index: 1; 
+  font-weight: 600;
 }
 
 /* Estilo para el logo */
@@ -117,7 +118,7 @@ main {
   border: none; /* Sin borde */
   border-radius: 10px; /* Bordes redondeados */
   padding:  20px 40px; /* Espaciado interno */
-  font-size: 1.2rem; /* Tamaño de fuente */
+  font-size: 1rem; /* Tamaño de fuente */
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
   transition: background-color 0.3s; /* Transición suave para el fondo */
 }
@@ -220,6 +221,133 @@ main {
 }
 
 
+#especialitats {
+  padding: 5rem;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.especialitats-box,
+.ortopedia-box,
+.mutues-box,
+.contacte-box {
+   padding: 5px;
+   padding-left: 25px;
+   padding-right: 25px;
+   width: 10.063rem; /* Usa un porcentaje para el ancho */
+   max-width: 300px; /* Limita el ancho máximo */
+   height: 1.875; /* Altura fija */
+   background-color: rgba(177, 28, 203, 0.14); /* Color de fondo con opacidad */
+   color: #B11CAB; /* Color del texto */
+   display: flex; /* Para centrar el contenido */
+   align-items: center; /* Centrar verticalmente */
+   justify-content: center; /* Centrar horizontalmente */
+   margin: 20px auto; /* Margen para separarlos y centrarlos en la página */
+   border-radius: 20px; /* Bordes redondeados opcional */
+   text-align: center; /* Centrar el texto */
+}
+.ortopedia-box h2,
+.mutues-box h2,
+.contacte-box h2, 
+.especialitats-box h2 {
+  color: #B11CAB;
+  margin: 0;
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+/* Contenedor de las 3 cards */
+.especialitats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.especialitats-container h3{
+  margin-bottom: 1rem;
+}
+
+/* Estilo de las cards individuales */
+.card {
+  background-color: white; /* Fondo blanco */
+  padding: 1rem;
+  width: 30%; /* Asegura que ocupen el espacio horizontalmente */
+  border-radius: 10px;
+  border: 2px solid #B11CAB; /* Borde violeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Animación */
+  text-align: center;
+  color: #333; /* Color del texto por defecto */
+  margin-top: 30px;
+  position: relative; /* Para posicionar el círculo correctamente */
+  padding-top: 30px; /* Espacio para el círculo */
+}
+
+/* Efecto hover */
+.card:hover {
+  transform: translateY(-5px);
+}
+.card.active:hover {
+  transform: none; /* No mover la card */
+  cursor: default; /* Cambiar el cursor para que no parezca interactivo */
+}
+.circle {
+  width: 10vw; /* Tamaño responsivo basado en el ancho de la ventana */
+  height: 10vw; /* Mantener proporción cuadrada */
+  max-width: 65px; /* Tamaño máximo de 70 píxeles */
+  max-height: 65px; /* Tamaño máximo de 70 píxeles */
+  border-radius: 50%; /* Hacerlo circular */
+  background-color: orange; /* Color por defecto (no seleccionado) */
+  margin: 0 auto; /* Centrar el círculo horizontalmente */
+  margin-bottom: 12px;
+  display: block; /* Para que ocupe su propio espacio */
+  position: relative; /* Posicionamiento relativo para el círculo */
+}
+
+.card.active .circle {
+  background-color: white; /* Color cuando está seleccionado */
+}
+/* Descripción de las especialitats (escondidas por defecto) */
+.description-card {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: white; /* Fondo blanco como las cards */
+  border-radius: 10px;
+  border: 2px solid #B11CAB; /* Borde violeta como las cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  color: #333; /* Color del texto */
+  text-align: left;
+}
+
+.description {
+  display: none;
+}
+
+/* Mostrar la descripción activa */
+.description.active {
+  display: block;
+}
+
+.card.active {
+  background-color: #B11CAB; /* Fondo violeta cuando se selecciona */
+  color: white; /* Texto blanco cuando se selecciona */
+  margin-bottom: -26px;
+  border-bottom-left-radius: 0; /* Quitar el borde redondeado inferior izquierdo */
+  border-bottom-right-radius: 0; /* Quitar el borde redondeado inferior derecho */
+  border-bottom: none;
+}
+
+/* Clase para bordes rectos */
+.borders-top-left-recto {
+  border-top-left-radius: 0; /* Para la card 1 */
+}
+
+.borders-top-right-recto {
+  border-top-right-radius: 0; /* Para la card 3 */
+}
+
 /* Estilos para el footer */
 footer {
   background-color: #333;
@@ -279,6 +407,24 @@ footer {
     color: #555; /* Color gris para la descripción */
     margin-left: 0px;
   }
+
+  /* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .especialitats-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 1rem;
+  }
+
+  .description-card {
+      width: 100%;
+  }
+}
+
 }
 
 @media (max-width: 480px) {
