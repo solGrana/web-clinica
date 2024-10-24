@@ -130,7 +130,7 @@ main {
 
 /* Estilos para el cuadro del teléfono */
 .phone-box {
-  background-color: #f2722352; /* Color de fondo naranja */
+  background-color: #F2712345; /* Color de fondo naranja */
   width: 62px; /* Ancho del cuadro */
   height: 62px; /* Alto del cuadro */
   display: flex; /* Disposición en fila */
@@ -176,8 +176,8 @@ main {
   margin-bottom: 40px; /* Margen superior para separación */
   max-width: 440px; /* Limitar el ancho de la card */
   margin-left: 60px; /* Alinear con el CTA */
-  flex-direction: row; /* Colocar elementos en columna */
-  justify-content: center; /* Centrar verticalmente */
+  flex-direction: row; 
+  justify-content: center; 
 }
 
 .profile-image {
@@ -284,8 +284,14 @@ main {
   position: relative; /* Para posicionar el círculo correctamente */
   padding-top: 30px; /* Espacio para el círculo */
 }
-
-/* Efecto hover */
+.card.active {
+  background-color: #B11CAB; /* Fondo violeta cuando se selecciona */
+  color: white; /* Texto blanco cuando se selecciona */
+  margin-bottom: -25px;
+  border-bottom-left-radius: 0; /* Quitar el borde redondeado inferior izquierdo */
+  border-bottom-right-radius: 0; /* Quitar el borde redondeado inferior derecho */
+  border-bottom: none;
+}
 .card:hover {
   transform: translateY(-5px);
 }
@@ -296,29 +302,34 @@ main {
 .circle {
   width: 10vw; /* Tamaño responsivo basado en el ancho de la ventana */
   height: 10vw; /* Mantener proporción cuadrada */
-  max-width: 65px; /* Tamaño máximo de 70 píxeles */
-  max-height: 65px; /* Tamaño máximo de 70 píxeles */
-  border-radius: 50%; /* Hacerlo circular */
-  background-color: orange; /* Color por defecto (no seleccionado) */
+  max-width: 65px;
+  max-height: 65px; 
+  border-radius: 50%; 
+  background-color: orange; 
   margin: 0 auto; /* Centrar el círculo horizontalmente */
   margin-bottom: 12px;
-  display: block; /* Para que ocupe su propio espacio */
-  position: relative; /* Posicionamiento relativo para el círculo */
+  display: block;
+  position: relative; 
 }
 
 .card.active .circle {
   background-color: white; /* Color cuando está seleccionado */
 }
+
 /* Descripción de las especialitats (escondidas por defecto) */
 .description-card {
   width: 100%;
   padding: 1.5rem;
-  background-color: white; /* Fondo blanco como las cards */
+  background-color: white; 
   border-radius: 10px;
-  border: 2px solid #B11CAB; /* Borde violeta como las cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  color: #333; /* Color del texto */
+  border: 2px solid #B11CAB; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333; 
   text-align: left;
+
+  display: flex; /* Usar flexbox para colocar el texto y la imagen en línea */
+  align-items: flex-start; /* Alinear los elementos al inicio verticalmente */
+  justify-content: space-between;
 }
 
 .description {
@@ -327,17 +338,44 @@ main {
 
 /* Mostrar la descripción activa */
 .description.active {
-  display: block;
+  display: flex;
+  flex-direction: row;
 }
 
-.card.active {
-  background-color: #B11CAB; /* Fondo violeta cuando se selecciona */
-  color: white; /* Texto blanco cuando se selecciona */
-  margin-bottom: -26px;
-  border-bottom-left-radius: 0; /* Quitar el borde redondeado inferior izquierdo */
-  border-bottom-right-radius: 0; /* Quitar el borde redondeado inferior derecho */
-  border-bottom: none;
+.description-text{
+  margin: 30px;
+  margin-top: 40px;
+  flex: 1;
 }
+
+.description-text h4{
+  font-size: 2.625rem;
+}
+
+.description-text p{
+ margin-bottom: 30px;
+}
+
+.description-image {
+  border-radius: 20px;
+  margin: 30px;
+  margin-left: 100px;
+  max-width: 400px; /* Asegura que la imagen no sobresalga del contenedor */
+
+  height: auto; 
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  flex: 1;
+}
+
+/* Asegúrate de que las imágenes no se salgan del contenedor */
+.description-card img {
+  max-width: 50%; /* Asegura que no sobresalga del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  filter: brightness(0.85);
+  max-width: 80%; /* Asegura que la imagen no sobresalga del contenedor */
+
+}
+
 
 /* Clase para bordes rectos */
 .borders-top-left-recto {
