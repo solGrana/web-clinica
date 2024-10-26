@@ -24,13 +24,13 @@ La web está diseñada para ser moderna, accesible y fácil de navegar.
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/web-clinica.git
+    git clone https://github.com/tu-usuario/web-clinica.git
 ```
 
 2. Navegar al directorio del proyecto:
 
 ```bash
-cd web-clinica
+    cd web-clinica
 ```
 
 3. Abrir el archivo index.html en el navegador para ver el sitio web localmente.

@@ -3,29 +3,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;/* Tipografía */
+  font-family: 'DM Sans', sans-serif;
 }
 
 /* Estilos para el body */
 body {
-  line-height: 1.6;/* Espaciado entre líneas */
-  color: #333; /* Color del texto */
+  line-height: 1.6;
+  /* Espacio entre líneas */
+  color: #333;
   background-color: rgb(255, 255, 255);
 }
+
 .inicio-container {
-  background-image: url('cadira2.png'); /* Ruta de la imagen de fondo */
-  width: 100%; /* Ocupa todo el ancho de la página */
-  min-height: calc(100vh - 80px); /* Ocupa al menos toda la altura de la ventana menos la altura del header */
-  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-  background-position: top center; /* Asegura que la imagen comience desde la parte superior */
-  background-attachment: fixed; /* Fija la imagen de fondo */
-  padding: 20px; /* Espacio alrededor del contenido */
+  background-image: url('cadira2.png');
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  padding: 20px;
 }
 
 /* Estilos para el header */
 header {
   background-color: white;
-  padding: 5px;/* Espaciado interno */
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
   position: relative;
@@ -35,68 +37,60 @@ header {
   margin-right: 80px;
   display: flex;
   align-items: center;
-  z-index: 1; 
+  z-index: 1;
   font-weight: 600;
 }
 
 /* Estilo para el logo */
 .logo {
-  max-width: 100px;/* Ajustar el tamaño máximo del logo (más pequeño) */
-  height: auto; /* Mantener la proporción de la imagen */
-  margin-right: 20px; /* Espacio a la derecha del logo */
-  margin-left: 20px; 
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-/* Estilos para el nav */
 nav {
   flex-grow: 1;
-  /* Permite que el nav ocupe el espacio restante */
   text-align: center;
-  /* Centrar el contenido dentro del nav */
 }
 
 nav ul {
-  list-style: none; /* Sin viñetas */
-  padding: 0; /* Sin padding */
-  display: inline-flex;/* Elementos en línea */
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
 }
 
 nav ul li {
-  margin: 0 15px; /* Espaciado entre enlaces */
+  margin: clamp(0.3rem, 1.25rem, 1.5rem);
 }
 
 nav ul li a {
-  color: #333; /* Color de los enlaces */
-  text-decoration: none; /* Sin subrayado */
+  color: #333;
+  text-decoration: none;
 }
 
-/* Estilos para el main */
 main {
-  padding: 20px;/* Espaciado interno */
-  z-index: 1; /* Asegura que el header esté por encima del fondo */
+  padding: 20px;
+  z-index: 1;
 }
 
-/* Estilos para el hero */
 #hero {
-  background-size: cover; /* Cubrir toda el área */
-  background-position: center; /* Centrar la imagen */
-  padding: 10px; /* Espaciado interno */
-  text-align: left;/* Alinear texto a la izquierda */
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: left;
   margin-left: 50px;
   text-align: left;
 }
 
 #hero h2 {
   font-size: 3.875rem;
-  /* Tamaño de fuente más grande */
   line-height: 1.2;
-  /* Espacio entre líneas */
   margin-bottom: 40px;
-  /* Espaciado vertical */
   color: black;
-  /* Color del texto en negro */
+  max-width: 50rem;
 }
 
 #hero p {
@@ -104,119 +98,117 @@ main {
   color: #5C5C5C;
   margin-top: 10px;
   margin-bottom: 40px;
+  max-width: 40rem;
 }
 
 .contact-container {
   display: flex;
-  align-items: center; 
-  margin-top: 30px; 
+  align-items: center;
+  margin-top: 30px;
 }
 
 .CTA {
-  background-color: #B11CAB; /* Color de fondo */
-  color: white; /* Color del texto en blanco */
-  border: none; /* Sin borde */
-  border-radius: 10px; /* Bordes redondeados */
-  padding:  20px 40px; /* Espaciado interno */
-  font-size: 1rem; /* Tamaño de fuente */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
-  transition: background-color 0.3s; /* Transición suave para el fondo */
+  background-color: #B11CAB;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Efecto al pasar el mouse */
 .CTA:hover {
-  background-color: #9E0A9B; /* Color de fondo más oscuro al pasar el mouse */
+  background-color: #9E0A9B;
 }
 
-/* Estilos para el cuadro del teléfono */
 .phone-box {
-  background-color: #F2712345; /* Color de fondo naranja */
-  width: 62px; /* Ancho del cuadro */
-  height: 62px; /* Alto del cuadro */
-  display: flex; /* Disposición en fila */
-  flex-direction: column; /* Colocar elementos en columna */
-  align-items: center; /* Centrar horizontalmente */
-  justify-content: center; /* Centrar verticalmente */
-  border-radius: 10px; /* Bordes redondeados */
+  background-color: #F2712345;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   margin-left: 28px;
   margin-right: 20px;
 }
 
-/* Estilos para el ícono del teléfono */
 .phone-icon {
-  width: 30px; /* Ancho del ícono */
-  height: auto; /* Alto del ícono */
-}
-/* Contenedor para la información del teléfono */
-.phone-info {
-  display: flex; /* Usar flexbox para disposición vertical */
-  flex-direction: column; /* Colocar elementos en columna */
-  align-items: flex-start; /* Alinear a la izquierda */
-}
-/* Estilos para el texto del teléfono */
-.phone-label {
-  color: #B11CAB; /* Color del texto */
-  font-size: 1rem; /* Tamaño de fuente del texto */
-  font-weight: bold;
-}
-.phone-number {
-  color: black; /* Color del texto */
-  font-size: 1rem; /* Tamaño de fuente del texto */
+  width: 30px;
+  height: auto;
 }
 
-/* LinkedIn card */
+.phone-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.phone-label {
+  color: #B11CAB;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.phone-number {
+  color: black;
+  font-size: 1rem;
+}
+
 .profile-card {
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
+  background-color: #ffffff;
+  border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.233);
-  padding: 20px; /* Espaciado interno */
-  display: flex; /* Usar flexbox para alinear elementos */
-  align-items: flex-start; /* Alinear al principio (arriba) */
-  margin-top: 40px; /* Margen superior para separación */
-  margin-bottom: 40px; /* Margen superior para separación */
-  max-width: 440px; /* Limitar el ancho de la card */
-  margin-left: 60px; /* Alinear con el CTA */
-  flex-direction: row; 
-  justify-content: center; 
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 440px;
+  margin-left: 60px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .profile-image {
-  width: 41px; /* Ancho de la imagen */
-  height: 41px; /* Alto de la imagen */
-  border-radius: 50%; /* Imagen circular */
-  margin-right: 15px; /* Espacio a la derecha de la imagen */
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .profile-info {
-  flex-grow: 1; /* Permitir que ocupe el espacio restante */
+  flex-grow: 1;
 }
 
 .profile-name {
-  margin: 0; /* Sin margen */
-  font-size: 0.9rem; /* Tamaño de fuente del nombre */
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .profile-job {
-  margin: 0; /* Sin margen */
+  margin: 0;
   color: #B11CAB;
-  font-size: 0.7rem; 
+  font-size: 0.7rem;
 }
 
 .linkedin-icon {
-  display: flex; /* Usar flex para alinear el icono */
-  align-items: center; /* Centrar verticalmente */
-  margin-left: auto; /* Empujar el icono a la derecha */
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .linkedin-img {
-  width: 24px; /* Ancho del icono */
-  height: 24px; /* Alto del icono */
+  width: 24px;
+  height: 24px;
 }
 
 .profile-description {
-  margin-top: 20px; /* Margen superior para separación */
-  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
-  color: #555; /* Color gris para la descripción */
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #555;
   margin-left: -50px;
 }
 
@@ -226,30 +218,35 @@ main {
   text-align: center;
   margin-left: 100px;
   margin-right: 100px;
+  max-width: 70%;
+  margin: 0 auto;
+  /* Centrar el box */
 }
 
 .especialitats-box,
 .ortopedia-box,
 .mutues-box,
 .contacte-box {
-   padding: 5px;
-   padding-left: 25px;
-   padding-right: 25px;
-   width: 10.063rem; /* Usa un porcentaje para el ancho */
-   max-width: 300px; /* Limita el ancho máximo */
-   height: 1.875; /* Altura fija */
-   background-color: rgba(177, 28, 203, 0.14); /* Color de fondo con opacidad */
-   color: #B11CAB; /* Color del texto */
-   display: flex; /* Para centrar el contenido */
-   align-items: center; /* Centrar verticalmente */
-   justify-content: center; /* Centrar horizontalmente */
-   margin: 20px auto; /* Margen para separarlos y centrarlos en la página */
-   border-radius: 20px; /* Bordes redondeados opcional */
-   text-align: center; /* Centrar el texto */
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 10.063rem;
+  max-width: 300px;
+  height: 1.875rem;
+  background-color: rgba(177, 28, 203, 0.14);
+  color: #B11CAB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 50px;
 }
+
 .ortopedia-box h2,
 .mutues-box h2,
-.contacte-box h2, 
+.contacte-box h2,
 .especialitats-box h2 {
   color: #B11CAB;
   margin: 0;
@@ -264,71 +261,74 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.especialitats-container h3{
+.especialitats-container h3 {
   margin-bottom: 1rem;
 }
 
 /* Estilo de las cards individuales */
 .card {
-  background-color: white; /* Fondo blanco */
+  background-color: white;
   padding: 1rem;
-  width: 30%; /* Asegura que ocupen el espacio horizontalmente */
+  width: 30%;
   border-radius: 10px;
-  border: 2px solid #B11CAB; /* Borde violeta */
+  border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Animación */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   text-align: center;
-  color: #333; /* Color del texto por defecto */
-  margin-top: 30px;
-  position: relative; /* Para posicionar el círculo correctamente */
-  padding-top: 30px; /* Espacio para el círculo */
+  color: #333;
+  position: relative;
+  padding-top: 30px;
 }
+
 .card.active {
-  background-color: #B11CAB; /* Fondo violeta cuando se selecciona */
-  color: white; /* Texto blanco cuando se selecciona */
+  background-color: #B11CAB;
+  color: white;
   margin-bottom: -25px;
-  border-bottom-left-radius: 0; /* Quitar el borde redondeado inferior izquierdo */
-  border-bottom-right-radius: 0; /* Quitar el borde redondeado inferior derecho */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-bottom: none;
 }
+
 .card:hover {
   transform: translateY(-5px);
 }
+
 .card.active:hover {
-  transform: none; /* No mover la card */
-  cursor: default; /* Cambiar el cursor para que no parezca interactivo */
+  transform: none;
+  cursor: default;
 }
+
 .circle {
-  width: 10vw; /* Tamaño responsivo basado en el ancho de la ventana */
-  height: 10vw; /* Mantener proporción cuadrada */
-  max-width: 65px;
-  max-height: 65px; 
-  border-radius: 50%; 
-  background-color: orange; 
-  margin: 0 auto; /* Centrar el círculo horizontalmente */
+  width: 10vw;
+  height: 10vw;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  background-color: orange;
+  margin: 0 auto;
   margin-bottom: 12px;
   display: block;
-  position: relative; 
+  position: relative;
 }
 
 .card.active .circle {
-  background-color: white; /* Color cuando está seleccionado */
+  background-color: white;
 }
 
-/* Descripción de las especialitats (escondidas por defecto) */
+/* Descripción de las especialitats (escondidas por default) */
 .description-card {
   width: 100%;
   padding: 1.5rem;
-  background-color: white; 
+  background-color: white;
   border-radius: 10px;
-  border: 2px solid #B11CAB; 
+  border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333; 
+  color: #333;
   text-align: left;
 
-  display: flex; /* Usar flexbox para colocar el texto y la imagen en línea */
-  align-items: flex-start; /* Alinear los elementos al inicio verticalmente */
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -342,168 +342,302 @@ main {
   flex-direction: row;
 }
 
-.description-text{
+.description-text {
   margin: 30px;
   margin-top: 40px;
   flex: 1;
 }
 
-.description-text h4{
+.description-text h4 {
   font-size: 2.625rem;
+  max-width: 15rem;
 }
 
-.description-text p{
- margin-bottom: 30px;
+.description-text p {
+  margin-bottom: 30px;
 }
 
 .description-image {
   border-radius: 20px;
   margin: 30px;
   margin-left: 100px;
-  max-width: 400px; /* Asegura que la imagen no sobresalga del contenedor */
-
-  height: auto; 
-  object-fit: cover; /* Mantiene la proporción de la imagen */
+  max-width: 25rem;
+  height: auto;
+  object-fit: cover;
   flex: 1;
 }
 
-/* Asegúrate de que las imágenes no se salgan del contenedor */
 .description-card img {
-  max-width: 50%; /* Asegura que no sobresalga del contenedor */
-  height: auto; /* Mantiene la relación de aspecto */
+  max-width: 40%;
+  height: auto;
   filter: brightness(0.85);
-  max-width: 80%; /* Asegura que la imagen no sobresalga del contenedor */
-
 }
 
 
 /* Clase para bordes rectos */
 .borders-top-left-recto {
-  border-top-left-radius: 0; /* Para la card 1 */
+  border-top-left-radius: 0;
+  /* Para la card 1 */
 }
 
 .borders-top-right-recto {
-  border-top-right-radius: 0; /* Para la card 3 */
+  border-top-right-radius: 0;
+  /* Para la card 3 */
 }
 
-/* Estilos para el footer */
+#ortopedia {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  width: clamp(200px, 80%, 1050px);
+  position: relative;
+}
+
+.ortopedia-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.text-container {
+  max-width: 50%;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.text-container .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+/* .image-background {
+  position: absolute;
+  width: 80%;
+  max-width: 80%;
+  height: 100%;
+  background: linear-gradient(135deg, #B11CAB78, #B11CAB);
+  border-radius: 8px;
+  z-index: 1;
+  transform: translate(8%, -110%);
+  margin-left: 30px; 
+} */
+
+.ortopedia-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  z-index: 1;
+  margin-left: 30px;
+  margin-bottom: -20px;
+  box-shadow: 1.5rem -1.5rem #b11cacba;
+  filter: brightness(0.85);
+}
+
 footer {
   background-color: #333;
-  /* Color de fondo del footer */
   color: white;
-  /* Color del texto en el footer */
   text-align: center;
-  /* Alineación centrada */
   padding: 10px;
-  /* Espaciado interno */
   position: relative;
-  /* Posición relativa */
   bottom: 0;
-  /* Posición al fondo */
   width: 100%;
-  /* Ancho completo */
 }
 
-/* Media queries para hacer la página responsive */
-@media (max-width: 768px) {
-  header {
-    padding: 15px;
-    /* Ajustar padding en pantallas pequeñas */
-    margin: 30px;
-    /* Ajustar margen en pantallas pequeñas */
-  }
+/* Responsividad */
 
-  nav ul li {
-    margin: 0 10px;
-    /* Ajustar margen en pantallas pequeñas */
-  }
-
-  #hero h2 {
-    font-size: 2rem;
-    /* Ajustar tamaño de fuente en pantallas pequeñas */
-  }
-
-  #hero {
-    margin: 0px;
-    /* Ajustar margen en pantallas pequeñas */
-  }
-
-  .profile-card {
-    align-items: center;
-    margin-left: 10px;
-    max-width: 100%;
-    margin-right: 15px;
-  }
-
-  .profile-image {
-    width: 80px;
-    height: 80px;
-  }
-  .profile-description {
-    margin-top: 20px; /* Margen superior para separación */
-    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
-    color: #555; /* Color gris para la descripción */
-    margin-left: 0px;
-  }
-
-  /* Diseño responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-  .especialitats-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
+@media (max-width: 1600px) {
   .card {
-      width: 80%;
-      margin-bottom: 1rem;
+    font-size: 0.9rem;
   }
 
   .description-card {
-      width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #especialitats {
+    max-width: 75%;
   }
 }
 
+@media (max-width: 1450px) {
+  .card {
+    font-size: 0.9rem;
+  }
+
+  .description-card {
+    font-size: 0.9rem;
+  }
+
+  #especialitats {
+    max-width: 90%;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
+
   header {
-    padding: 10px;
-    /* Ajustar padding en pantallas muy pequeñas */
-    margin: 5px;
-    /* Ajustar margen en pantallas muy pequeñas */
-  }
-
-  nav ul {
-    flex-direction: column;
-    /* Cambiar a columna en pantallas pequeñas */
+    font-size: 0.9rem;
+    margin-left: 70px;
+    margin-right: 55px;
   }
 
   nav ul li {
-    margin: 5px 0;
-    /* Ajustar margen entre elementos */
-  }
-
-  #hero h2 {
-    font-size: 1.5rem;
-    /* Ajustar aún más en pantallas muy pequeñas */
+    margin: 0.8rem;
   }
 
   #hero {
-    margin: 5px;
-    /* Ajustar margen en pantallas muy pequeñas */
+    width: 90%;
+  }
+
+  #hero h2 {
+    font-size: 3rem;
+    max-width: 40rem;
   }
 
   #hero p {
     font-size: 0.9rem;
-    /* Ajustar aún más en pantallas muy pequeñas */
+    max-width: 30rem;
+  }
+
+  .CTA {
+    font-size: 0.9rem;
+  }
+
+  .phone-icon {
+    width: 25px;
+  }
+
+  .phone-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .phone-label {
+    font-size: 0.9rem;
+  }
+
+  .phone-number {
+    font-size: 0.9rem;
   }
 
   .profile-card {
-    gap: 15px;
+    max-width: 400px;
   }
 
-  .profile-image {
-    width: 90px;
-    height: 90px;
+  #especialitats {
+    max-width: 90%;
+  }
+
+  .card {
+    font-size: 0.8rem;
+  }
+
+  .description-card {
+    font-size: 0.8rem;
+  }
+
+  .description-text h4 {
+    font-size: 1.5rem;
+  }
+
+  .description-card img {
+    max-width: 30%;
+  }
+
+  .description-image {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .logo {
+    margin: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  #hero p,
+  .phone-number {
+    font-size: 1rem;
+  }
+
+  .CTA {
+    padding: 10px 20px;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  .especialitats-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .ortopedia-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container,
+  .ortopedia-image {
+    max-width: 100%;
+  }
+
+  .ortopedia-image {
+    margin-left: -40px;
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .phone-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .CTA {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 10px;
   }
 }
