@@ -221,6 +221,7 @@ main {
   max-width: 70%;
   margin: 0 auto;
   /* Centrar el box */
+  margin-bottom: -50px;
 }
 
 .especialitats-box,
@@ -389,17 +390,20 @@ main {
   padding: 40px 20px;
   background-color: #f9f9f9;
   margin: 0 auto;
-  width: clamp(200px, 80%, 1050px);
+  max-width: 70%;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .ortopedia-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto;
   gap: 20px;
+  transform: translate(2%);
+  margin-top: 100px;
 }
 
 .text-container {
@@ -485,6 +489,9 @@ footer {
   }
 
   #especialitats {
+    max-width: 90%;
+  }
+  #ortopedia {
     max-width: 90%;
   }
 }
