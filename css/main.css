@@ -6,10 +6,8 @@
   font-family: 'DM Sans', sans-serif;
 }
 
-/* Estilos para el body */
 body {
   line-height: 1.6;
-  /* Espacio entre líneas */
   color: #333;
   background-color: rgb(255, 255, 255);
 }
@@ -21,20 +19,20 @@ body {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /* Estilos para el header */
 header {
   background-color: white;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 0.313rem;
+  border-radius: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
   position: relative;
-  margin: 20px;
-  margin-bottom: 40px;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin: 1.25rem;
+  margin-bottom: 2.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   display: flex;
   align-items: center;
   z-index: 1;
@@ -43,12 +41,12 @@ header {
 
 /* Estilo para el logo */
 .logo {
-  max-width: 100px;
+  max-width: 6.25rem;
   height: auto;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  margin-top: 0.938rem;
+  margin-bottom: 0.938rem;
 }
 
 nav {
@@ -72,47 +70,47 @@ nav ul li a {
 }
 
 main {
-  padding: 20px;
+  padding: 1.25rem;
   z-index: 1;
 }
 
 #hero {
   background-size: cover;
   background-position: center;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 3.125rem;
   text-align: left;
 }
 
 #hero h2 {
   font-size: 3.875rem;
   line-height: 1.2;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   color: black;
   max-width: 50rem;
 }
 
 #hero p {
-  font-size: 1.125 rem;
+  font-size: 1.125rem;
   color: #5C5C5C;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin-top: 0.625rem;
+  margin-bottom: 2.5rem;
   max-width: 40rem;
 }
 
 .contact-container {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .CTA {
   background-color: #B11CAB;
   color: white;
   border: none;
-  border-radius: 10px;
-  padding: 20px 40px;
+  border-radius: 0.625rem;
+  padding: 1.25rem 2.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -124,19 +122,19 @@ main {
 
 .phone-box {
   background-color: #F2712345;
-  width: 62px;
-  height: 62px;
+  width: 3.875rem;
+  height: 3.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  margin-left: 28px;
-  margin-right: 20px;
+  border-radius: 0.625rem;
+  margin-left: 1.75rem;
+  margin-right: 1.25rem;
 }
 
 .phone-icon {
-  width: 30px;
+  width: 1.875rem;
   height: auto;
 }
 
@@ -159,24 +157,24 @@ main {
 
 .profile-card {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.233);
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   align-items: flex-start;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  max-width: 440px;
-  margin-left: 60px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 27.5rem;
+  margin-left: 3.75rem;
   flex-direction: row;
   justify-content: center;
 }
 
 .profile-image {
-  width: 41px;
-  height: 41px;
+  width: 2.563rem;
+  height: 2.563rem;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 0.938rem;
 }
 
 .profile-info {
@@ -201,27 +199,27 @@ main {
 }
 
 .linkedin-img {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .profile-description {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-size: 0.8rem;
   color: #555;
-  margin-left: -50px;
+  margin-left: -3.125rem;
 }
 
 
 #especialitats {
   padding: 5rem;
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
   max-width: 70%;
   margin: 0 auto;
   /* Centrar el box */
-  margin-bottom: -50px;
+  margin-bottom: -3.125rem;
 }
 
 .especialitats-box,
@@ -229,20 +227,20 @@ main {
 .mutues-box,
 .contacte-box {
   padding: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 1.563rem;
+  padding-right: 1.563rem;
   width: 10.063rem;
-  max-width: 300px;
+  max-width: 18.75rem;
   height: 1.875rem;
   background-color: rgba(177, 28, 203, 0.14);
   color: #B11CAB;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px auto;
-  border-radius: 20px;
+  margin: 1.25rem auto;
+  border-radius: 1.25rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .ortopedia-box h2,
@@ -271,7 +269,7 @@ main {
   background-color: white;
   padding: 1rem;
   width: 30%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -279,13 +277,13 @@ main {
   text-align: center;
   color: #333;
   position: relative;
-  padding-top: 30px;
+  padding-top: 1.875rem;
 }
 
 .card.active {
   background-color: #B11CAB;
   color: white;
-  margin-bottom: -25px;
+  margin-bottom: -1.563rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: none;
@@ -303,12 +301,12 @@ main {
 .circle {
   width: 10vw;
   height: 10vw;
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 3.75rem;
+  max-height: 3.75rem;
   border-radius: 50%;
   background-color: orange;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   display: block;
   position: relative;
 }
@@ -322,7 +320,7 @@ main {
   width: 100%;
   padding: 1.5rem;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -344,8 +342,8 @@ main {
 }
 
 .description-text {
-  margin: 30px;
-  margin-top: 40px;
+  margin: 1.875rem;
+  margin-top: 2.5rem;
   flex: 1;
 }
 
@@ -355,13 +353,13 @@ main {
 }
 
 .description-text p {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .description-image {
-  border-radius: 20px;
-  margin: 30px;
-  margin-left: 100px;
+  border-radius: 1.25rem;
+  margin: 1.875rem;
+  margin-left: 6.25rem;
   max-width: 25rem;
   height: auto;
   object-fit: cover;
@@ -387,12 +385,12 @@ main {
 }
 
 #ortopedia {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   background-color: #f9f9f9;
   margin: 0 auto;
   max-width: 70%;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 .ortopedia-content {
@@ -401,9 +399,9 @@ main {
   justify-content: space-between;
   max-width: 95%;
   margin: 0 auto;
-  gap: 20px;
+  gap: 1.25rem;
   transform: translate(2%);
-  margin-top: 100px;
+  margin-top: 6.25rem;
 }
 
 .text-container {
@@ -412,7 +410,7 @@ main {
 
 .text-container h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #333;
 }
 
@@ -427,7 +425,7 @@ main {
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 /* .image-background {
@@ -445,10 +443,10 @@ main {
 .ortopedia-image {
   max-width: 80%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   z-index: 1;
-  margin-left: 30px;
-  margin-bottom: -20px;
+  margin-left: 1.875rem;
+  margin-bottom: -1.25rem;
   box-shadow: 1.5rem -1.5rem #b11cacba;
   filter: brightness(0.85);
 }
@@ -456,7 +454,7 @@ main {
 #mutues {
   padding: 2rem;
   background-color: #f0f0f5;
-  border-radius: 10px; 
+  border-radius: 0.625rem; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   text-align: center; 
 }
@@ -532,7 +530,7 @@ footer {
   margin: 1rem 0;
 }
 .map{
- border-radius: 10px;
+ border-radius: 0.625rem;
  margin-bottom: 0.8rem;
 }
 
@@ -586,8 +584,8 @@ footer {
 
   header {
     font-size: 0.9rem;
-    margin-left: 70px;
-    margin-right: 55px;
+    margin-left: 4.375rem;
+    margin-right: 3.438rem;
   }
 
   nav ul li {
@@ -613,12 +611,12 @@ footer {
   }
 
   .phone-icon {
-    width: 25px;
+    width: 1.563rem;
   }
 
   .phone-box {
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
   }
 
   .phone-label {
@@ -630,7 +628,7 @@ footer {
   }
 
   .profile-card {
-    max-width: 400px;
+    max-width: 25rem;
   }
 
   #especialitats {
@@ -654,7 +652,7 @@ footer {
   }
 
   .description-image {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 
   .text-container h2 {
@@ -668,12 +666,12 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    padding: 20px;
-    margin: 10px;
+    padding: 1.25rem;
+    margin: 0.625rem;
   }
 
   .logo {
-    margin: 10px;
+    margin: 0.625rem;
   }
 
   nav ul {
@@ -692,21 +690,24 @@ footer {
   }
 
   .CTA {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
   }
 
   .profile-card {
     width: 100%;
   }
-
+/* 
   .especialitats-container {
     flex-direction: row;
     align-items: center;
+  } */
+  #especialitats {
+    max-width: 100%;
   }
 
   .card {
-    width: 100%;
-    margin-bottom: 15px;
+    font-size: 0.75rem;
+    width: 32%;
   }
 
   .ortopedia-content {
@@ -720,24 +721,24 @@ footer {
   }
 
   .ortopedia-image {
-    margin-left: -40px;
-    margin-top: 20px;
+    margin-left: -2.5rem;
+    margin-top: 1.25rem;
   }
 
 }
 
 @media (max-width: 480px) {
   .phone-box {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   .CTA {
-    padding: 10px;
+    padding: 0.625rem;
     font-size: 0.875rem;
   }
 
   .card {
-    padding: 10px;
+    padding: 0.625rem;
   }
 }
