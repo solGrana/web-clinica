@@ -259,13 +259,19 @@ main {
 .especialitats-container h3 {
   margin-bottom: 1rem;
 }
- .arrow {
+.arrow {
  border: none;
- color: #9E0A9B;
- font-size: 3rem;
+ color: #9e0a9ce1;
+ font-size: 4rem;
  position: absolute;
-/*  top: 35%;*/
  transform: translateY(80%); 
+
+ transition: transform 0.3s ease; 
+ cursor: pointer
+
+} 
+.arrow:hover {
+  color: #8f088d;
 } 
 
 .arrow.left {
@@ -477,15 +483,16 @@ footer {
   background-color: #B11CAB; 
   color: white;
   padding-left:2rem ;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-right:2rem ;
 }
 
 .footer-container {
   display: flex; 
   justify-content: space-around;
-  align-items: flex-start; 
-  padding: 3rem; 
+  align-items: flex-start;  
+  padding-left:3rem ;
+  padding-right:3rem ;
   background-color: #B11CAB; 
   font-size: 0.9rem;
 }
