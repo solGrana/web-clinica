@@ -67,6 +67,9 @@
             <h2>ESPECIALITATS</h2>
         </div>
 
+        <button class="arrow left" onclick="moveCarousel(-1)">‹</button>
+        <button class="arrow right" onclick="moveCarousel(1)">›</button>
+
         <!-- Contenedor de las 3 cards -->
         <div class="especialitats-container">
             <div class="card active" id="quiropidia" onclick="showDescription('quiropidia')">
@@ -89,6 +92,23 @@
                     durant
                     la marxa.</p>
             </div>
+            
+            <div class="card" id="test1" onclick="showDescription('ortopodologia')">
+                <div class="circle"></div>
+                <h3>test1</h3>
+                <p>Es basa en el tractament d'aquelles alteracions que influeixen en la funció correcta del peu
+                    durant
+                    la marxa.</p>
+            </div>
+
+            <div class="card" id="test2" onclick="showDescription('ortopodologia')">
+                <div class="circle"></div>
+                <h3>test2</h3>
+                <p>Es basa en el tractament d'aquelles alteracions que influeixen en la funció correcta del peu
+                    durant
+                    la marxa.</p>
+            </div>
+            
         </div>
 
         <!-- Card para mostrar la descripción de la especialitat seleccionada -->
@@ -130,6 +150,31 @@
                 </div>
                 <img src="images/quiropidia.png" alt="Descripción Quiropidia" class="description-image">
             </div>
+            <div id="test1-description" class="description">
+                <div class="description-text">
+                    <h4>test1</h4> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti molestiae quidem a
+                        omnis
+                        velit neque veritatis,
+                        totam provident odio quam ut molestias voluptatem! Laboriosam obcaecati necessitatibus
+                        blanditiis explicabo rem.</p>
+                    <button class="CTA">Contacta't amb nosaltres</button>
+                </div>
+                <img src="images/quiropidia.png" alt="Descripción Quiropidia" class="description-image">
+            </div>
+            <div id="test2-description" class="description">
+                <div class="description-text">
+                    <h4>test2</h4> <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti molestiae quidem a
+                        omnis
+                        velit neque veritatis,
+                        totam provident odio quam ut molestias voluptatem! Laboriosam obcaecati necessitatibus
+                        blanditiis explicabo rem.</p>
+                    <button class="CTA">Contacta't amb nosaltres</button>
+                </div>
+                <img src="images/quiropidia.png" alt="Descripción Quiropidia" class="description-image">
+            </div>
+
         </div>
     </section>
 

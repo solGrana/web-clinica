@@ -1,4 +1,3 @@
-/* Reseteo básico de márgenes y paddings */
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +38,6 @@ header {
   font-weight: 600;
 }
 
-/* Estilo para el logo */
 .logo {
   max-width: 6.25rem;
   height: auto;
@@ -210,7 +208,6 @@ main {
   margin-left: -3.125rem;
 }
 
-
 #especialitats {
   padding: 5rem;
   text-align: center;
@@ -218,7 +215,6 @@ main {
   margin-right: 6.25rem;
   max-width: 70%;
   margin: 0 auto;
-  /* Centrar el box */
   margin-bottom: -3.125rem;
 }
 
@@ -263,6 +259,21 @@ main {
 .especialitats-container h3 {
   margin-bottom: 1rem;
 }
+ .arrow {
+ border: none;
+ color: #9E0A9B;
+ font-size: 3rem;
+ position: absolute;
+/*  top: 35%;*/
+ transform: translateY(80%); 
+} 
+
+.arrow.left {
+ left: 5vw;
+}
+.arrow.right {
+ right: 5vw; 
+} 
 
 /* Estilo de las cards individuales */
 .card {
@@ -278,6 +289,9 @@ main {
   color: #333;
   position: relative;
   padding-top: 1.875rem;
+
+  min-width: calc(33.33% - 20px);
+  display: none;
 }
 
 .card.active {
@@ -296,6 +310,10 @@ main {
 .card.active:hover {
   transform: none;
   cursor: default;
+}
+
+.card.visible {
+  display: block; 
 }
 
 .circle {
@@ -329,13 +347,14 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  overflow: hidden;
 }
 
 .description {
   display: none;
 }
 
-/* Mostrar la descripción activa */
 .description.active {
   display: flex;
   flex-direction: row;
@@ -372,16 +391,16 @@ main {
   filter: brightness(0.85);
 }
 
-
-/* Clase para bordes rectos */
-.borders-top-left-recto {
-  border-top-left-radius: 0;
-  /* Para la card 1 */
+.description-card.middle {
+  border-radius: 10px;
 }
 
-.borders-top-right-recto {
+.description-card.right {
   border-top-right-radius: 0;
-  /* Para la card 3 */
+}
+
+.description-card.left {
+  border-top-left-radius: 0;
 }
 
 #ortopedia {
@@ -428,17 +447,6 @@ main {
   margin-top: 0.625rem;
 }
 
-/* .image-background {
-  position: absolute;
-  width: 80%;
-  max-width: 80%;
-  height: 100%;
-  background: linear-gradient(135deg, #B11CAB78, #B11CAB);
-  border-radius: 8px;
-  z-index: 1;
-  transform: translate(8%, -110%);
-  margin-left: 30px; 
-} */
 
 .ortopedia-image {
   max-width: 80%;
@@ -544,9 +552,6 @@ footer {
   background-color: #B11CAB; 
   border-top: 0.5px solid white;
 }
-
-
-
 
 /* Responsividad */
 @media (max-width: 1600px) {
@@ -696,11 +701,7 @@ footer {
   .profile-card {
     width: 100%;
   }
-/* 
-  .especialitats-container {
-    flex-direction: row;
-    align-items: center;
-  } */
+
   #especialitats {
     max-width: 100%;
   }
