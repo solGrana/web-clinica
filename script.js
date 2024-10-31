@@ -1,46 +1,40 @@
 // Inicializar variables
 const cards = document.querySelectorAll('.card');
 let currentIndex = 0;
+let activeCardIndex = 0;
 const cardsToShow = 3;
 
 // Función para mostrar las cards según el índice
 function updateVisibleCards() {
     cards.forEach((card, index) => {
         if (index >= currentIndex && index < currentIndex + cardsToShow) {
-            card.classList.add('visible'); 
+            card.classList.add('visible');
         } else {
-            card.classList.remove('visible'); 
+            card.classList.remove('visible');
         }
     });
 }
 
 // Función para mostrar la descripción correspondiente a la card seleccionada
 function showDescription(especialitat) {
-    // Remover la clase 'active' de todas las cards
-    document.querySelectorAll('.card').forEach(function (card) {
+    document.querySelectorAll('.card').forEach((card) => {
         card.classList.remove('active');
     });
 
-    // Añadir la clase 'active' a la card seleccionada
     document.getElementById(especialitat).classList.add('active');
 
-    // Ocultar todas las descripciones
-    document.querySelectorAll('.description').forEach(function (desc) {
+    document.querySelectorAll('.description').forEach((desc) => {
         desc.classList.remove('active');
     });
 
-    // Mostrar la descripción correspondiente
-    if (especialitat !== 'quiropidia') {
-        document.getElementById(especialitat + '-description').classList.add('active');
-    } else {
-        document.getElementById('quiropidia-description').classList.add('active');
-    }
+    document.getElementById(especialitat + '-description').classList.add('active');
 }
 
 // Inicializa la funcionalidad para todas las cards
-document.querySelectorAll('.card').forEach(function (card) {
+document.querySelectorAll('.card').forEach((card) => {
     card.addEventListener('click', function () {
         const especialitat = this.id;
+        activeCardIndex = Array.from(cards).indexOf(this);
         showDescription(especialitat);
         updateDescriptionCardBorders(); // Actualiza los bordes de la card de descripción
     });
@@ -49,58 +43,60 @@ document.querySelectorAll('.card').forEach(function (card) {
 // Función para actualizar los bordes de la card de descripción
 function updateDescriptionCardBorders() {
     const descriptionCard = document.querySelector('.description-card');
-    const activeCard = document.querySelector('.card.active');
-    const activeIndex = Array.from(cards).indexOf(activeCard);
-
-    // Remover cualquier clase de borde previa
     descriptionCard.classList.remove('middle', 'right', 'left');
 
-    // Asignar la clase correcta según la posición
-    if (activeIndex === currentIndex + 1) {
-        descriptionCard.classList.add('middle'); 
-    } else if (activeIndex === currentIndex) {
-        descriptionCard.classList.add('left'); 
-    } else if (activeIndex === currentIndex + 2) {
-        descriptionCard.classList.add('right'); 
+    if (activeCardIndex === currentIndex + 1) {
+        descriptionCard.classList.add('middle');
+    } else if (activeCardIndex === currentIndex) {
+        descriptionCard.classList.add('left');
+    } else if (activeCardIndex === currentIndex + 2) {
+        descriptionCard.classList.add('right');
     }
 }
 
-// Función para mover el carrusel
+// Función para aplicar el efecto shake al llegar a los límites
+function applyShakeEffect(card) {
+    card.classList.add('shake');
+    setTimeout(() => {
+        card.classList.remove('shake');
+    }, 500);
+}
+
+// Función para mover el carrusel y el selector activo entre las cards visibles
 function moveCarousel(direction) {
     const maxIndex = cards.length - cardsToShow;
-    currentIndex += direction;
-
-    // Asegura que el índice esté dentro del rango permitido
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } else if (currentIndex > maxIndex) {
-        currentIndex = maxIndex;
-    }
-
-    updateVisibleCards();
-
-    // Verifica si la card activa está en el rango visible
     const activeCard = document.querySelector('.card.active');
-    const activeIndex = Array.from(cards).indexOf(activeCard);
+    const activeId = activeCard ? activeCard.id : null;
 
-    // Si la card activa no está visible, activa la primera visible
-    if (activeIndex < currentIndex || activeIndex >= currentIndex + cardsToShow) {
-        activeCard.classList.remove('active');
-        cards[currentIndex].classList.add('active'); // Activa la primera card visible
+    // Aplicar sacudida dependiendo de si estamos en los límites y según la card activa
+    if (
+        (currentIndex === 0 && direction === -1 && activeId === 'quiropidia') ||
+        (currentIndex === maxIndex && direction === 1 && activeId === 'test2')
+    ) {
+        const shakeCard = direction === -1 ? cards[currentIndex] : cards[currentIndex + cardsToShow - 1];
+        applyShakeEffect(shakeCard);
+        return;
     }
 
-    // Actualiza la descripción basada en la card activa
-    showDescription(cards[currentIndex].id);
+    if ((activeCardIndex === currentIndex && direction === -1) ||
+        (activeCardIndex === currentIndex + 2 && direction === 1)) {
+        currentIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
+        updateVisibleCards();
+    } else {
+        activeCardIndex += direction;
+    }
 
-    // Actualiza los bordes de la card de descripción
+    const newActiveCard = cards[activeCardIndex];
+    newActiveCard.classList.add('active');
+    showDescription(newActiveCard.id);
     updateDescriptionCardBorders();
 }
 
 // Inicializa las cards visibles y la descripción activa al cargar
 updateVisibleCards();
-showDescription('quiropidia');
+showDescription(cards[activeCardIndex].id);
 
-// Agrega eventos a las flechas
+// Eventos para las flechas
 document.querySelector('.arrow-left').addEventListener('click', function() {
     moveCarousel(-1);
 });

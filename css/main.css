@@ -27,11 +27,11 @@ header {
   padding: 0.313rem;
   border-radius: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
-  position: relative;
-  margin: 1.25rem;
+  position: fixed;
+  top: 1.25rem;
+  left: 5rem;
+  right: 5rem;
   margin-bottom: 2.5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
   display: flex;
   align-items: center;
   z-index: 1;
@@ -67,6 +67,12 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  color: #151515;
+  text-decoration: none;
+}
+
+
 main {
   padding: 1.25rem;
   z-index: 1;
@@ -79,6 +85,7 @@ main {
   text-align: left;
   margin-left: 3.125rem;
   text-align: left;
+  margin-top: 5rem;
 }
 
 #hero h2 {
@@ -259,27 +266,29 @@ main {
 .especialitats-container h3 {
   margin-bottom: 1rem;
 }
+
 .arrow {
- border: none;
- color: #9e0a9ce1;
- font-size: 4rem;
- position: absolute;
- transform: translateY(80%); 
+  border: none;
+  color: #9e0a9ce1;
+  font-size: 4rem;
+  position: absolute;
+  transform: translateY(80%);
 
- transition: transform 0.3s ease; 
- cursor: pointer
+  transition: transform 0.3s ease;
+  cursor: pointer
+}
 
-} 
 .arrow:hover {
   color: #8f088d;
-} 
+}
 
 .arrow.left {
- left: 5vw;
+  left: 5vw;
 }
+
 .arrow.right {
- right: 5vw; 
-} 
+  right: 5vw;
+}
 
 /* Estilo de las cards individuales */
 .card {
@@ -319,7 +328,7 @@ main {
 }
 
 .card.visible {
-  display: block; 
+  display: block;
 }
 
 .circle {
@@ -409,6 +418,33 @@ main {
   border-top-left-radius: 0;
 }
 
+/* Estilo para el efecto de sacudida */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
 #ortopedia {
   padding: 2.5rem 1.25rem;
   background-color: #f9f9f9;
@@ -468,39 +504,39 @@ main {
 #mutues {
   padding: 2rem;
   background-color: #f0f0f5;
-  border-radius: 0.625rem; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  text-align: center; 
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .mutues-content .description {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   color: #333;
   line-height: 1.6;
 }
 
 footer {
-  background-color: #B11CAB; 
+  background-color: #B11CAB;
   color: white;
-  padding-left:2rem ;
+  padding-left: 2rem;
   padding-top: 3rem;
-  padding-right:2rem ;
+  padding-right: 2rem;
 }
 
 .footer-container {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
-  align-items: flex-start;  
-  padding-left:3rem ;
-  padding-right:3rem ;
-  background-color: #B11CAB; 
+  align-items: flex-start;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #B11CAB;
   font-size: 0.9rem;
 }
 
 .footer-section {
-  flex: 1; 
+  flex: 1;
   margin: 0 1rem;
-  text-align: left; 
+  text-align: left;
   flex-grow: 1;
 }
 
@@ -509,12 +545,12 @@ footer {
 }
 
 .footer-section p {
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
 .footer-section ul {
-  list-style: none; 
-  padding: 0; 
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
@@ -523,19 +559,19 @@ footer {
 
 .footer-section a {
   color: white;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .footer-section a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-#footer-service{
+#footer-service {
   margin: 0.5rem 0;
   max-width: 25%;
 }
 
-#footer-links{
+#footer-links {
   margin-left: 20%;
 }
 
@@ -544,19 +580,20 @@ footer {
   justify-content: center;
   margin: 1rem 0;
 }
-.map{
- border-radius: 0.625rem;
- margin-bottom: 0.8rem;
+
+.map {
+  border-radius: 0.625rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer-copy {
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-top: 1.5rem; 
+  margin-top: 1.5rem;
   text-align: center;
-  padding: 1rem 0; 
+  padding: 1rem 0;
   color: white;
-  background-color: #B11CAB; 
+  background-color: #B11CAB;
   border-top: 0.5px solid white;
 }
 
@@ -587,6 +624,7 @@ footer {
   #especialitats {
     max-width: 90%;
   }
+
   #ortopedia {
     max-width: 90%;
   }
@@ -670,6 +708,7 @@ footer {
   .text-container h2 {
     font-size: 1.5rem;
   }
+
   .text-container .description {
     font-size: 0.8rem;
   }
