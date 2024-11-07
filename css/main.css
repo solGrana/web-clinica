@@ -65,11 +65,12 @@ nav ul li {
 nav ul li a {
   color: #333;
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
-  color: #151515;
-  text-decoration: none;
+  color: #B11CAB;
+  border-bottom: 1px solid #B11CAB;
 }
 
 
@@ -191,13 +192,19 @@ main {
   font-size: 0.9rem;
 }
 
-.profile-job {
+.profile-job .violet{
   margin: 0;
   color: #B11CAB;
   font-size: 0.7rem;
 }
 
-.linkedin-icon {
+.profile-job .orange{
+  margin: 0;
+  color: #F27123;
+  font-size: 0.6rem;
+}
+
+/* .linkedin-icon {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -206,7 +213,7 @@ main {
 .linkedin-img {
   width: 1.5rem;
   height: 1.5rem;
-}
+} */
 
 .profile-description {
   margin-top: 1.25rem;
@@ -337,17 +344,26 @@ main {
   max-width: 3.75rem;
   max-height: 3.75rem;
   border-radius: 50%;
-  background-color: orange;
+  background-color: #F27123;
   margin: 0 auto;
   margin-bottom: 0.75rem;
-  display: block;
+  display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
-
+.circle-icon {
+  width: 60%;
+  height: 60%;
+  object-fit: contain; 
+}
 .card.active .circle {
   background-color: white;
 }
 
+.card.active .circle-icon {
+  filter: invert(11%) sepia(33%) saturate(10022%) hue-rotate(283deg) brightness(80%) contrast(98%);
+}
 /* Descripción de las especialitats (escondidas por default) */
 .description-card {
   width: 100%;
@@ -376,14 +392,14 @@ main {
 }
 
 .description-text {
-  margin: 1.875rem;
+  margin: 1rem;
   margin-top: 2.5rem;
   flex: 1;
 }
 
 .description-text h4 {
-  font-size: 2.625rem;
-  max-width: 15rem;
+  font-size: 2.2rem;
+  max-width: 25rem;
 }
 
 .description-text p {
@@ -392,8 +408,8 @@ main {
 
 .description-image {
   border-radius: 1.25rem;
-  margin: 1.875rem;
-  margin-left: 6.25rem;
+  margin: 1.8rem;
+  margin-left: 3rem;
   max-width: 25rem;
   height: auto;
   object-fit: cover;
@@ -507,12 +523,24 @@ main {
   border-radius: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
 }
 
 .mutues-content .description {
   font-size: 1.2rem;
   color: #333;
   line-height: 1.6;
+}
+
+.mutues-logo {
+  max-width: 180px;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+}
+.mutue-logo {
+padding: 2rem;
 }
 
 footer {
