@@ -204,17 +204,6 @@ main {
   font-size: 0.6rem;
 }
 
-/* .linkedin-icon {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.linkedin-img {
-  width: 1.5rem;
-  height: 1.5rem;
-} */
-
 .profile-description {
   margin-top: 1.25rem;
   font-size: 0.8rem;
@@ -263,60 +252,87 @@ main {
   font-size: 0.75rem;
 }
 
-/* Contenedor de las 3 cards */
-.especialitats-container {
+.wrapper {
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
-
-.especialitats-container h3 {
+.wrapper h3{
   margin-bottom: 1rem;
 }
 
-.arrow {
-  border: none;
-  color: #9e0a9ce1;
-  font-size: 4rem;
-  position: absolute;
-  transform: translateY(80%);
-
-  transition: transform 0.3s ease;
-  cursor: pointer
-}
-
-.arrow:hover {
-  color: #8f088d;
-}
-
-.arrow.left {
-  left: 5vw;
-}
-
-.arrow.right {
-  right: 5vw;
-}
-
-/* Estilo de las cards individuales */
-.card {
-  background-color: white;
-  padding: 1rem;
-  width: 30%;
-  border-radius: 0.625rem;
-  border: 2px solid #B11CAB;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.wrapper i {
+  margin-left: -5%;
+  margin-right: -5%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.25rem;
+  position: absolute;
   text-align: center;
-  color: #333;
-  position: relative;
-  padding-top: 1.875rem;
+  line-height: 50px;
+  background: #B11CAB;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
 
-  min-width: calc(33.33% - 20px);
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 18px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
   display: none;
 }
 
-.card.active {
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.625rem;
+  border: 2px solid #B11CAB;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  color: #333;
+}
+.carousel .card.active {
   background-color: #B11CAB;
   color: white;
   margin-bottom: -1.563rem;
@@ -325,18 +341,28 @@ main {
   border-bottom: none;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.carousel .card .ver-mas {
+  margin-top: 20px; /* Ajusta el espacio hacia abajo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;;
+  text-decoration: underline; /* Subrayado */
 }
 
-.card.active:hover {
-  transform: none;
-  cursor: default;
+.carousel .card .ver-menos-text {
+  display: none;
 }
 
-.card.visible {
+.carousel .card.active .ver-menos-text {
   display: block;
 }
+
+.carousel .card.active .ver-mas-text {
+  display: none;
+}
+
 
 .circle {
   width: 10vw;
@@ -357,19 +383,21 @@ main {
   height: 60%;
   object-fit: contain; 
 }
-.card.active .circle {
+ .card.active .circle {
   background-color: white;
 }
 
 .card.active .circle-icon {
   filter: invert(11%) sepia(33%) saturate(10022%) hue-rotate(283deg) brightness(80%) contrast(98%);
-}
+} 
+
 /* Descripción de las especialitats (escondidas por default) */
 .description-card {
   width: 100%;
   padding: 1.5rem;
   background-color: white;
   border-radius: 0.625rem;
+  border-top-left-radius: 0;
   border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -422,48 +450,8 @@ main {
   filter: brightness(0.85);
 }
 
-.description-card.middle {
-  border-radius: 10px;
-}
-
-.description-card.right {
-  border-top-right-radius: 0;
-}
-
-.description-card.left {
-  border-top-left-radius: 0;
-}
-
-/* Estilo para el efecto de sacudida */
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-5px);
-  }
-
-  50% {
-    transform: translateX(5px);
-  }
-
-  75% {
-    transform: translateX(-5px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.shake {
-  animation: shake 0.5s ease;
-}
-
 #ortopedia {
   padding: 2.5rem 1.25rem;
-  background-color: #f9f9f9;
   margin: 0 auto;
   max-width: 70%;
   position: relative;
@@ -505,7 +493,6 @@ main {
   margin-top: 0.625rem;
 }
 
-
 .ortopedia-image {
   max-width: 80%;
   height: auto;
@@ -519,13 +506,12 @@ main {
 
 #mutues {
   padding: 2rem;
-  background-color: #f0f0f5;
   border-radius: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 
-  margin-left: 6.25rem;
-  margin-right: 6.25rem;
+  margin-left: 9rem;
+  margin-right: 9rem;
 }
 
 .mutues-content .description {
@@ -535,7 +521,7 @@ main {
 }
 
 .mutues-logo {
-  max-width: 180px;
+  max-width: 200px;
   aspect-ratio: 4/3;
   object-fit: contain;
 }
@@ -625,7 +611,7 @@ footer {
   border-top: 0.5px solid white;
 }
 
-/* Responsividad */
+/* Responsividad */ 
 @media (max-width: 1600px) {
   .card {
     font-size: 0.9rem;
@@ -639,33 +625,6 @@ footer {
     max-width: 75%;
   }
 }
-
-/* @media (max-width: 1450px) {
-  .card {
-    font-size: 0.8rem;
-    padding: 0.9rem;
-  }
-
-  .description-card {
-    font-size: 0.8rem;
-    padding: 0.8rem;
-  }
-  .description-text h4 {
-    font-size: 1.5rem;
-  }
-
-  #especialitats {
-    max-width: 90%;
-  }
-
-  #ortopedia {
-    max-width: 90%;
-  }
-
-  .CTA {
-    font-size: 0.9rem;
-  }
-} */
 
 @media (max-width: 1450px) {
 
@@ -823,4 +782,4 @@ footer {
   .card {
     padding: 0.625rem;
   }
-}
+} 

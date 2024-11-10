@@ -53,15 +53,12 @@
                 <div class="profile-info">
                     <h3 class="profile-name">Beth Samitier i Rubió</h3>
                     <p class="profile-job">
-                        <span class="violet">Podòloga i Tecnica en Ortopedia  | </span>
+                        <span class="violet">Podòloga i Tecnica en Ortopedia | </span>
                         <span class="orange">N° COL·LEGIADA 1185</span>
                     </p>
                     <p class="profile-description">Tractament de podologia de primera qualitat realitzat<br>
                         per experts de camp, molt recomanable per a tothom.</p>
                 </div>
-<!--                 <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" class="linkedin-icon">
-                    <img src="images/linkedin.svg" alt="LinkedIn" class="linkedin-img">
-                </a> -->
             </div>
     </div>
 
@@ -69,66 +66,96 @@
         <div class="especialitats-box">
             <h2>ESPECIALITATS</h2>
         </div>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+                <li class="card active" id="quiropidia" onclick="showDescription('quiropidia')">
+                    <div class="circle">
+                        <img src="images/quiropodia-icon.png" alt="quiropodia" class="circle-icon">
+                    </div>
+                    <h3>Quiropidia</h3>
+                    <p>És un tractament podològic que es realitza per eliminar dureses i callositats, a més
+                        d'alteracions a les
+                        ungles dels peus.</p>
+                    <div class="ver-mas">
+                        <span class="ver-mas-text">Veure més</span>
+                        <span class="ver-menos-text">Veure menys</span>
+                        <!-- Flecha derecha -->
+                    </div>
+                </li>
 
-        <button class="arrow left" onclick="moveCarousel(-1)">‹</button>
-        <button class="arrow right" onclick="moveCarousel(1)">›</button>
+                <li class="card" id="exploracio" onclick="showDescription('exploracio')">
+                    <div class="circle">
+                        <img src="images/exploracio-icon.png" alt="exploracio" class="circle-icon">
+                    </div>
+                    <h3>Exploració Biomecànica</h3>
+                    <p>Consisteix en una valoració del pacient, de la seva postura tant tumbat, assegut o de peu, i dels
+                        seus
+                        moviments.</p>
+                    <div class="ver-mas">
+                        <span class="ver-mas-text">Veure més</span>
+                        <span class="ver-menos-text">Veure menys</span>
+                        <!-- Flecha derecha -->
+                    </div>
+                </li>
 
-        <!-- Contenedor de las 3 cards -->
-        <div class="especialitats-container">
-            <div class="card active" id="quiropidia" onclick="showDescription('quiropidia')">
-                <div class="circle">
-                    <img src="images/quiropodia-icon.png" alt="quiropodia" class="circle-icon">
-                </div>
-                <h3>Quiropidia</h3>
-                <p>És un tractament podològic que es realitza per eliminar dureses i callositats, a més
-                    d'alteracions a
-                    les ungles dels peus.</p>
-            </div>
-            <div class="card" id="exploracio" onclick="showDescription('exploracio')">
-                <div class="circle">
-                    <img src="images/exploracio-icon.png" alt="exploracio" class="circle-icon">
-                </div>
-                <h3>Exploració Biomecànica</h3>
-                <p>Consisteix en una valoració del pacient, de la seva postura tant tumbat, assegut o de peu, i dels
-                    seus moviments.</p>
-            </div>
-            <div class="card" id="ortopodologia" onclick="showDescription('ortopodologia')">
-                <div class="circle">
-                    <img src="images/ortopodologia-icon.png" alt="ortopodologia" class="circle-icon">
-                </div>
-                <h3>Ortopodologia</h3>
-                <p>Es basa en el tractament d'aquelles alteracions que influeixen en la funció correcta del peu
-                    durant
-                    la marxa.</p>
-            </div>
-            
-            <div class="card" id="Podología" onclick="showDescription('Podología')">
-                <div class="circle">
-                    <img src="images/podologia-icon.png" alt="Podología" class="circle-icon">
-                </div>
-                <h3>Podología</h3>
-                <p>És una branca de la medicina que té per objecte l'estudi, diagnòstic i tractament de les 
-                    malalties i alteracions que afecten el peu.</p>
-            </div>
+                <li class="card" id="ortopodologia" onclick="showDescription('ortopodologia')">
+                    <div class="circle">
+                        <img src="images/ortopodologia-icon.png" alt="ortopodologia" class="circle-icon">
+                    </div>
+                    <h3>Ortopodologia</h3>
+                    <p>Es basa en el tractament d'aquelles alteracions que influeixen en la funció correcta del peu
+                        durant la
+                        marxa.</p>
+                    <div class="ver-mas">
+                        <span class="ver-mas-text">Veure més</span>
+                        <span class="ver-menos-text">Veure menys</span>
+                        <!-- Flecha derecha -->
+                    </div>
+                </li>
 
-            <div class="card" id="piediabetico" onclick="showDescription('piediabetico')">
-                <div class="circle">
-                    <img src="images/piediabetico-icon.png" alt="piediabetico" class="circle-icon">
-                </div>
-                <h3>Peu Diabétic</h3>
-                <p>És una complicació de la diabetis que es caracteritza per la infecció, ulceració o destrucció 
-                    dels teixits del peu.</p>
-            </div>
+                <li class="card" id="podologia" onclick="showDescription('podologia')">
+                    <div class="circle">
+                        <img src="images/podologia-icon.png" alt="Podología" class="circle-icon">
+                    </div>
+                    <h3>Podología</h3>
+                    <p>És una branca de la medicina que té per objecte l'estudi, diagnòstic i tractament de les
+                        malalties i
+                        alteracions que afecten el peu.</p>
+                    <div class="ver-mas">
+                        <span class="ver-mas-text">Veure més</span>
+                        <span class="ver-menos-text">Veure menys</span>
+                        <!-- Flecha derecha -->
+                    </div>
+                </li>
 
+                <li class="card" id="piediabetico" onclick="showDescription('piediabetico')">
+                    <div class="circle">
+                        <img src="images/piediabetico-icon.png" alt="piediabetico" class="circle-icon">
+                    </div>
+                    <h3>Peu Diabétic</h3>
+                    <p>És una complicació de la diabetis que es caracteritza per la infecció, ulceració o destrucció
+                        dels teixits
+                        del peu.</p>
+                    <div class="ver-mas">
+                        <span class="ver-mas-text">Veure més</span>
+                        <span class="ver-menos-text">Veure menys</span>
+                        <!-- Flecha derecha -->
+                    </div>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
 
         <!-- Card para mostrar la descripción de la especialitat seleccionada -->
-        <div class="description-card left" id="descripcion-card">
+        <div class="description-card" id="descripcion-card">
             <div id="quiropidia-description" class="description active">
                 <div class="description-text">
                     <h4>Quiropidia</h4> <br>
-                    <p>La quiropòdia és un tractament podològic que consisteix en l'eliminació de callositats i alteracions 
-                        a les ungles dels peus amb l'objectiu d'evitar que aquestes lesions lleus s'agreugin i derivin en 
+                    <p>La quiropòdia és un tractament podològic que consisteix en l'eliminació de callositats i
+                        alteracions
+                        a les ungles dels peus amb l'objectiu d'evitar que aquestes lesions lleus s'agreugin i derivin
+                        en
                         altres de més rellevància.</p>
                     <button class="CTA">Contacta't amb nosaltres</button>
                 </div>
@@ -137,9 +164,10 @@
             <div id="exploracio-description" class="description">
                 <div class="description-text">
                     <h4>Exploracio Biomecànica</h4> <br>
-                    <p>És un examen/estudi podològic que avalua la forma en què el cos es mou i com això afecta 
-                        l'estructura i la funció del cos. En el cas dels peus, una exploració biomecànica inclou una 
-                        anàlisi detallada de la petjada i la manera com el teu cos s'ajusta a la superfície on camines.</p>
+                    <p>És un examen/estudi podològic que avalua la forma en què el cos es mou i com això afecta
+                        l'estructura i la funció del cos. En el cas dels peus, una exploració biomecànica inclou una
+                        anàlisi detallada de la petjada i la manera com el teu cos s'ajusta a la superfície on camines.
+                    </p>
                     <button class="CTA">Contacta't amb nosaltres</button>
                 </div>
                 <img src="images/quiropidia.png" alt="Descripción Exploracio Biomecànica" class="description-image">
@@ -147,14 +175,15 @@
             <div id="ortopodologia-description" class="description">
                 <div class="description-text">
                     <h4>Ortopodologia</h4> <br>
-                    <p>L'ortopodologia es basa en el tractament de les alteracions mecàniques del peu, és a dir, de les 
-                        alteracions que influeixen en la funció correcta del peu durant la marxa. El tractament d’aquestes 
+                    <p>L'ortopodologia es basa en el tractament de les alteracions mecàniques del peu, és a dir, de les
+                        alteracions que influeixen en la funció correcta del peu durant la marxa. El tractament
+                        d’aquestes
                         alteracions és mitjançant:</p>
                     <button class="CTA">Contacta't amb nosaltres</button>
                 </div>
                 <img src="images/plantillas-ortopedicas.png" alt="Descripción ortopodologia" class="description-image">
             </div>
-            <div id="Podología-description" class="description">
+            <div id="podologia-description" class="description">
                 <div class="description-text">
                     <h4>Podología</h4> <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti molestiae quidem a
@@ -169,12 +198,14 @@
             <div id="piediabetico-description" class="description">
                 <div class="description-text">
                     <h4>Peu Diabétic</h4> <br>
-                    <p>El peu diabètic o síndrome del peu diabètic fa referència a la presència d'infecció, ulceració o 
-                        destrucció dels teixits del peu associada a neuropatia perifèrica i/o malaltia arterial perifèrica de 
-                        les extremitats inferiors de les persones amb diabetis mellitus. 
+                    <p>El peu diabètic o síndrome del peu diabètic fa referència a la presència d'infecció, ulceració o
+                        destrucció dels teixits del peu associada a neuropatia perifèrica i/o malaltia arterial
+                        perifèrica de
+                        les extremitats inferiors de les persones amb diabetis mellitus.
                         <br>
                         <br>
-                        Cura del peu diabètic i tractament preventiu d’úlceres vasculars i neuropàtiques.</p>
+                        Cura del peu diabètic i tractament preventiu d’úlceres vasculars i neuropàtiques.
+                    </p>
                     <button class="CTA">Contacta't amb nosaltres</button>
                 </div>
                 <img src="images/piediabetico.png" alt="Descripción pie diabetico" class="description-image">
@@ -192,10 +223,11 @@
             <div class="text-container">
                 <h2>Cuida el teu benestar amb les nostres solucions ortopèdiques a mida</h2>
                 <p class="description.active">
-                    Les nostres solucions ortopèdiques estan dissenyades per adaptar-se a les necessitats
-                    individuals de cada pacient, promovent el confort i benestar diari. Amb l'ús de
-                    materials d'alta qualitat i un procés personalitzat, assegurem que cada dispositiu
-                    compleixi amb els estàndards més alts d'eficàcia.
+                    Oferim un servei d'ortopèdia dissenyat per adaptar-se a les teves necessitats.
+                    Des de plantilles personalitzades fins a productes ortopèdics especialitzats,
+                    les nostres solucions estan pensades per millorar el teu confort, corregir postures i
+                    garantir una millor qualitat de vida. Amb un enfocament professional i la última tecnologia,
+                    t'ajudem a moure't amb més llibertat i seguretat.
                 </p>
             </div>
             <div class="image-wrapper">
@@ -239,18 +271,20 @@
         <div class="footer-container">
             <div class="footer-section" id="footer-service">
                 <h3>El nostre servei</h3>
-                <p>Trebalem per la cura del teu benestar amb solucions ortopèdiques personalitzades i d'alta qualitat.
+                <p>Treballem per la cura dels peus i venda de productes ortopèdics.
                     <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit fuga porro beatae
-                    laborum! Deserunt quisquam et dicta illo! Accusantium aspernatur neque quo, quaerat animi vero
-                    nostrum modi! Quae, dolore.
+                    Ens preocupem per la salut i el benestar dels nostres pacients.
+                    La dedicació i experiència de més de 24 anys al sector on donem un servei
+                    de qualitat i personalitzat.
                 </p>
             </div>
             <div class="footer-section" id="footer-links">
                 <h3>Enllaços útils</h3>
                 <ul>
-                    <li><a href="#">Enllaç 1</a></li>
-                    <li><a href="#">Enllaç 2</a></li>
+                    <li><a href="https://www.podocat.cat/">Col·legi de Podòlegs de Catalunya</a></li>
+                    <li><a
+                            href="https://catsalut.gencat.cat/ca/serveis-sanitaris/prestacions-complementaries/atencio-podologica-persones-diabetiques/">Professionals
+                            peu diabètic CatSalut</a></li>
                     <li><a href="#">Enllaç 3</a></li>
                     <li><a href="#">Enllaç 4</a></li>
                 </ul>
@@ -261,16 +295,16 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1246.9374193772633!2d2.812279767314603!3d41.984526933956545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae72202ba0515%3A0x8d32d6272a8902c0!2sCarrer%20Joaquim%20Vayreda%2C%2065%2C%2017001%20Girona%2C%20Spain!5e0!3m2!1sen!2sar!4v1729975340613!5m2!1sen!2sar"
                     width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-                <p> 📍 Joaquin Vayreda, 65 - 17001 Giriona</p>
+                <p> <img src="images/ubicacion.png"> Joaquin Vayreda, 65 - 17001 Giriona</p>
 
             </div>
         </div>
         <div class="footer-copy">
-            <p>&copy; All Rights Reserved</p>
+            <p>&copy; 2024 All Rights Reserved</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 
