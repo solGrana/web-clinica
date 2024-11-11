@@ -106,3 +106,21 @@ function setupCardClicks() {
 
 // Llamamos a la función para registrar los clics en las cards
 setupCardClicks();
+
+// Selecciona el tooltip y el contenedor
+const deliveryContainer = document.querySelector('.delivery-container');
+const tooltip = document.querySelector('.tooltip');
+
+// Texto original y texto al hacer clic
+const originalText = "Servei de podologia a domicili!";
+const clickedText = "Contacta'ns 972 20 77 16";
+
+// Cambia el texto al hacer clic
+deliveryContainer.addEventListener('click', () => {
+  tooltip.textContent = clickedText;
+});
+
+// Restaura el texto original al salir con el mouse
+deliveryContainer.addEventListener('mouseleave', () => {
+  tooltip.textContent = originalText;
+});
