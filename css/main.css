@@ -90,7 +90,7 @@ main {
 }
 
 #hero h2 {
-  font-size: 3.875rem;
+  font-size: 3.8rem;
   line-height: 1.2;
   margin-bottom: 2.5rem;
   color: black;
@@ -117,7 +117,7 @@ main {
   border: none;
   border-radius: 0.625rem;
   padding: 1.25rem 2.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -128,8 +128,8 @@ main {
 
 .phone-box {
   background-color: #F2712345;
-  width: 3.875rem;
-  height: 3.875rem;
+  width: 3.8rem;
+  height: 3.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,10 +254,10 @@ main {
 
 .wrapper {
   width: 100%;
+  height: 300px;
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
 }
 .wrapper h3{
   margin-bottom: 1rem;
@@ -320,9 +320,9 @@ main {
 
 .carousel .card {
   scroll-snap-align: start;
-  height: 342px;
+  height: 280px;
   cursor: pointer;
-  padding-bottom: 5px;
+  padding: 2rem;
   flex-direction: column;
   background-color: white;
   border-radius: 0.625rem;
@@ -331,8 +331,10 @@ main {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   text-align: center;
   color: #333;
+  font-size: 0.8rem;
 }
 .carousel .card.active {
+  height: 300px;
   background-color: #B11CAB;
   color: white;
   margin-bottom: -1.563rem;
@@ -363,12 +365,13 @@ main {
   display: none;
 }
 
-
 .circle {
   width: 10vw;
   height: 10vw;
   max-width: 3.75rem;
   max-height: 3.75rem;
+  min-width: 3rem;        /* Tamaño mínimo */
+  min-height: 3rem;       
   border-radius: 50%;
   background-color: #F27123;
   margin: 0 auto;
@@ -402,6 +405,8 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
   text-align: left;
+  font-size: 0.9rem;
+
 
   display: flex;
   align-items: flex-start;
@@ -426,7 +431,7 @@ main {
 }
 
 .description-text h4 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   max-width: 25rem;
 }
 

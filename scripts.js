@@ -50,25 +50,59 @@ const infiniteScroll = () => {
 carousel.addEventListener("scroll", infiniteScroll);
 
 function showDescription(especialitat) {
-    // Saca la clase active de todas las cards
-    document.querySelectorAll('.card').forEach((card) => {
-        card.classList.remove('active');
-    });
-
-    // Agrega la clase active a todas las instancias de la card seleccionada
+    // Selecciona todas las instancias de la card seleccionada (incluidas las duplicadas)
     const selectedCards = document.querySelectorAll(`.card#${especialitat}`);
-    selectedCards.forEach(card => {
-        card.classList.add('active');
-    });
 
-    // Esconde todas las descripciones
-    document.querySelectorAll('.description').forEach((desc) => {
-        desc.classList.remove('active');
-    });
+    // Verifica si alguna card tiene la clase 'active'
+    const isActive = Array.from(selectedCards).some(card => card.classList.contains('active'));
 
-    // Muestra la descripción de la card seleccionada
-    const selectedDescription = document.getElementById(`${especialitat}-description`);
-    if (selectedDescription) {
-        selectedDescription.classList.add('active');
+    // Si alguna card está activa, quítale la clase 'active' a todas las instancias
+    if (isActive) {
+        selectedCards.forEach(card => {
+            card.classList.remove('active');
+        });
+
+        // Esconde todas las descripciones
+        document.querySelectorAll('.description').forEach((desc) => {
+            desc.classList.remove('active');
+        });
+    } else {
+        // Si ninguna card está activa, agrega la clase 'active' a todas las instancias
+        selectedCards.forEach(card => {
+            card.classList.add('active');
+        });
+
+        // Esconde todas las descripciones antes de mostrar la nueva
+        document.querySelectorAll('.description').forEach((desc) => {
+            desc.classList.remove('active');
+        });
+
+        // Muestra la descripción de la card seleccionada
+        const selectedDescription = document.getElementById(`${especialitat}-description`);
+        if (selectedDescription) {
+            selectedDescription.classList.add('active');
+        }
     }
 }
+
+// Función que alterna la visibilidad de la descripción
+function toggleDescription() {
+    const description = document.querySelector('.description-card');
+    
+    // Verifica si la descripción está actualmente oculta
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'flex';  // Cambia a 'flex' para mostrar
+    } else {
+        description.style.display = 'none';  // Cambia a 'none' para ocultar
+    }
+}
+
+// Función que se llama al hacer clic en una card
+function setupCardClicks() {
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', toggleDescription);
+    });
+}
+
+// Llamamos a la función para registrar los clics en las cards
+setupCardClicks();
