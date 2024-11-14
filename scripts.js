@@ -71,6 +71,7 @@ function showDescription(especialitat) {
             selectedDescription.classList.add("active");
         }
     }
+    window.location.href = "#especialitats";
 }
 
 // Selecciona el tooltip y el contenedor
@@ -83,7 +84,11 @@ const clickedText = "Contacta'ns 972 20 77 16";
 
 // Cambia el texto al hacer clic
 deliveryContainer.addEventListener('click', () => {
-  tooltip.textContent = clickedText;
+    tooltip.textContent = clickedText;
+    // Restaura el texto original después de 3 segundos
+    setTimeout(() => {
+        tooltip.textContent = originalText;
+    }, 3000); // Ajusta el tiempo según prefieras
 });
 
 // Restaura el texto original al salir con el mouse

@@ -14,7 +14,7 @@ body {
 .inicio-container {
   background-image: url('cadira2.png');
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh);
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
@@ -85,15 +85,9 @@ main {
 
 .delivery-container {
   position: fixed;
-  bottom: 80px;
-  right: 50px;
+  bottom: 5rem;
+  right: 3.125rem;
   background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%
-  );
   cursor: pointer;
   transition: all 0.2s;
   width: 50px;
@@ -117,23 +111,18 @@ main {
   justify-content: center;
   border-radius: 50%;
   box-shadow: none;
+  transform: scale(0.8);
 }
 
 .delivery-container .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
   background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%
-  );
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
@@ -185,8 +174,8 @@ main {
 }
 
 .delivery-container .icon img {
-  border: 8px solid #F4DFF3; /* Cambia el grosor del borde si es necesario */
-  border-radius: 50%; /* Mantiene la forma redonda de la imagen */
+  border: 8px solid #F4DFF3; 
+  border-radius: 50%;
 }
 
 #hero {
@@ -200,7 +189,7 @@ main {
 }
 
 #hero h2 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 2.5rem;
   color: black;
@@ -299,7 +288,7 @@ main {
 
 .profile-name {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .profile-job .violet{
@@ -385,6 +374,7 @@ main {
   text-align: center;
   line-height: 50px;
   background: #B11CAB;
+  color: #333;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
@@ -432,7 +422,7 @@ main {
   scroll-snap-align: start;
   height: 280px;
   cursor: pointer;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   flex-direction: column;
   background-color: white;
   border-radius: 0.625rem;
@@ -442,6 +432,9 @@ main {
   text-align: center;
   color: #333;
   font-size: 0.8rem;
+  display: flex;
+  justify-content:start;
+  align-items: center;
 }
 .carousel .card.active {
   height: 300px;
@@ -454,13 +447,13 @@ main {
 }
 
 .carousel .card .ver-mas {
-  margin-top: 20px; /* Ajusta el espacio hacia abajo */
+  margin-top: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 0.8rem;;
-  text-decoration: underline; /* Subrayado */
+  text-decoration: underline; 
 }
 
 .carousel .card .ver-menos-text {
@@ -476,21 +469,23 @@ main {
 }
 
 .circle {
-  width: 10vw;
-  height: 10vw;
+  width: 3.2rem;
+  height: 3.2rem;
   max-width: 3.75rem;
   max-height: 3.75rem;
-  min-width: 3rem;        /* Tamaño mínimo */
+  min-width: 3rem;        
   min-height: 3rem;       
   border-radius: 50%;
   background-color: #F27123;
-  margin: 0 auto;
+  margin: 0 auto 10px auto; 
   margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
 }
+
 .circle-icon {
   width: 60%;
   height: 60%;
@@ -535,8 +530,8 @@ main {
 }
 
 .description-text {
-  margin: 1rem;
-  margin-top: 2.5rem;
+  margin: 0.8rem;
+  margin-top: 1rem;
   flex: 1;
 }
 
@@ -545,8 +540,17 @@ main {
   max-width: 25rem;
 }
 
+.description-text h5 {
+  font-size: 1.2rem;
+  max-width: 25rem;
+  color: #F27123;
+}
+.description-text p.tic {
+  margin-bottom: 0.5rem; 
+}
 .description-text p {
   margin-bottom: 1.875rem;
+  max-width: 28rem;
 }
 
 .description-image {
@@ -563,6 +567,22 @@ main {
   max-width: 40%;
   height: auto;
   filter: brightness(0.85);
+}
+
+.description-text .podiatry-category{
+  color: #B11CAB;
+  font-size: 0.9rem;
+}
+.description-text .podiatry-content{
+  max-width: 100%;
+
+}
+.podologia-img{
+  max-width: 100%; 
+  height: auto;
+  position: relative;
+  align-self: flex-end; 
+  border-radius: 10px; 
 }
 
 #ortopedia {
@@ -622,9 +642,7 @@ main {
 #mutues {
   padding: 2rem;
   border-radius: 0.625rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-
   margin-left: 9rem;
   margin-right: 9rem;
 }
@@ -897,4 +915,4 @@ footer {
   .card {
     padding: 0.625rem;
   }
-}  
+}
