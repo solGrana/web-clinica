@@ -28,7 +28,7 @@ html{
 /* Estilos para el header */
 header {
   background-color: white;
-  padding: 0.313rem;
+  padding: 0.3rem;
   border-radius: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.527);
   position: fixed;
@@ -111,7 +111,8 @@ main {
   justify-content: center;
   border-radius: 50%;
   box-shadow: none;
-  transform: scale(0.8);
+  transform: scale(0.9);
+  object-fit: contain;
 }
 
 .delivery-container .icon {
@@ -132,7 +133,6 @@ main {
   top: -2;
   right: calc(100% + 10px); /* Ajuste para que el tooltip salga por la izquierda */
   z-index: -10;
-  transform: scaleX(0);
   transform-origin: right center;
   margin-right: 5px;
   height: 50px;
@@ -168,14 +168,15 @@ main {
   transition: 0.5s linear;
 }
 
-.delivery-container:hover .icon {
+/* .delivery-container:hover .icon {
   transform: rotate(360deg);
   transition: 0.5s linear;
-}
+} */
 
 .delivery-container .icon img {
   border: 8px solid #F4DFF3; 
   border-radius: 50%;
+  max-width: 70px;
 }
 
 #hero {
@@ -779,7 +780,7 @@ footer {
   }
 
   #hero p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     max-width: 30rem;
   }
 
@@ -881,7 +882,8 @@ footer {
 
   .card {
     font-size: 0.75rem;
-    width: 32%;
+    width: 100%;
+    padding: 1rem;
   }
 
   .ortopedia-content {
