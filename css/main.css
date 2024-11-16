@@ -193,7 +193,6 @@ main {
 #hero h2 {
   font-size: 4rem;
   line-height: 1.2;
-  margin-bottom: 2.5rem;
   color: black;
   max-width: 50rem;
 }
@@ -206,6 +205,16 @@ main {
   max-width: 40rem;
 }
 
+#hero .underline {
+  position: relative;
+  display: inline-block;
+  width: 65%;
+  margin-left: auto; 
+  margin-right: 0; 
+  text-align: right;
+  bottom: 20px;
+  left: 100px;
+}
 .contact-container {
   display: flex;
   align-items: center;
@@ -375,14 +384,11 @@ main {
   position: absolute;
   text-align: center;
   line-height: 50px;
-  background: #B11CAB;
-  color: #333;
+  color: #BABABA;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }
@@ -424,7 +430,7 @@ main {
   scroll-snap-align: start;
   height: 280px;
   cursor: pointer;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1rem 1rem 1rem;
   flex-direction: column;
   background-color: white;
   border-radius: 0.625rem;
