@@ -40,6 +40,7 @@ header {
   align-items: center;
   z-index: 1;
   font-weight: 600;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .logo {
@@ -168,11 +169,6 @@ main {
   transform: translateX(-0px);
   transition: 0.5s linear;
 }
-
-/* .delivery-container:hover .icon {
-  transform: rotate(360deg);
-  transition: 0.5s linear;
-} */
 
 .delivery-container .icon img {
   border: 8px solid #F4DFF3; 
@@ -333,8 +329,7 @@ main {
 
 .especialitats-box,
 .ortopedia-box,
-.mutues-box,
-.contacte-box {
+.mutues-box{
   padding: 5px;
   padding-left: 1.563rem;
   padding-right: 1.563rem;
@@ -354,7 +349,6 @@ main {
 
 .ortopedia-box h2,
 .mutues-box h2,
-.contacte-box h2,
 .especialitats-box h2 {
   color: #B11CAB;
   margin: 0;
@@ -514,6 +508,7 @@ main {
   background-color: white;
   border-radius: 0.625rem;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border: 2px solid #B11CAB;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -541,6 +536,8 @@ main {
   margin: 0.8rem;
   margin-top: 1rem;
   flex: 1;
+  align-items: flex-start; 
+  position: relative;
 }
 
 .description-text h4 {
@@ -583,14 +580,13 @@ main {
 }
 .description-text .podiatry-content{
   max-width: 100%;
-
 }
 .podologia-img{
-  max-width: 100%; 
-  height: auto;
-  position: relative;
-  align-self: flex-end; 
-  border-radius: 10px; 
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+  right: 80px; /* Ajusta la distancia desde la parte derecha */
+  width: 100%; /* Tamaño adecuado */
+  height: auto; /* Mantener proporción */
 }
 
 #ortopedia {
@@ -767,7 +763,7 @@ footer {
   }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1440px) { /* large desktop */
 
    header {
     font-size: 0.9rem;
@@ -848,8 +844,13 @@ footer {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 1280px) { /* small desktop */
+  .podologia-img{
+    display: none;
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* tablet */
   header {
     flex-direction: column;
     padding: 1.25rem;
@@ -910,7 +911,7 @@ footer {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* mobile */
   .phone-box {
     width: 3.125rem;
     height: 3.125rem;

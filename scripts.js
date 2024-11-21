@@ -95,3 +95,32 @@ deliveryContainer.addEventListener('click', () => {
 deliveryContainer.addEventListener('mouseleave', () => {
   tooltip.textContent = originalText;
 });
+
+// Seleccionar el header 
+const header = document.querySelector('header');
+
+let inactivityTimer;
+
+function hideHeader() {
+  header.style.opacity = '0';
+  header.style.pointerEvents = 'none'; 
+}
+function showHeader() {
+  header.style.opacity = '1';
+  header.style.pointerEvents = 'auto'; 
+}
+
+// Reiniciar el temporizador de inactividad
+function resetInactivityTimer() {
+  showHeader(); // Mostrar el header en cada interacción
+  clearTimeout(inactivityTimer); // Limpiar el temporizador anterior
+  inactivityTimer = setTimeout(hideHeader, 3000); // Ocultar despues de 3 segundos
+}
+
+// eventos de interaccion
+['mousemove', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+  window.addEventListener(event, resetInactivityTimer);
+});
+
+// Inicializar el temporizador al cargar la pag
+resetInactivityTimer();
