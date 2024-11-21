@@ -21,7 +21,7 @@ body {
   padding: 1.25rem;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -78,6 +78,99 @@ nav ul li a:hover {
   border-bottom: 1px solid #B11CAB;
 }
 
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-left: 3.125rem;
+  padding-right: 3rem;
+}
+
+.mobile-header .logo {
+  max-width: 10rem;
+  height: auto;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 10rem;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* fuera de pantalla */
+  width: 45%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 101;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin-bottom: 1rem;
+}
+
+.side-menu a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.side-menu a:hover {
+  color: #B11CAB;
+  border-bottom: none;
+}
+
+.close-btn {
+  display: none;
+  /* Inicialmente no visible */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #333;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 102;
+  /* Asegurarse de que esté encima del contenido */
+}
+
+/* Mostrar el botón de la cruz solo cuando el menú está abierto */
+.side-menu.open .close-btn {
+  display: block;
+}
 
 main {
   padding: 1.25rem;
@@ -132,7 +225,8 @@ main {
 .tooltip {
   position: absolute;
   top: -2;
-  right: calc(100% + 10px); /* Ajuste para que el tooltip salga por la izquierda */
+  right: calc(100% + 10px);
+  /* Ajuste para que el tooltip salga por la izquierda */
   z-index: -10;
   transform-origin: right center;
   margin-right: 5px;
@@ -148,7 +242,7 @@ main {
   justify-content: right;
   padding-right: 16px;
   color: #B11CAB;
-  font-size:0.8rem;
+  font-size: 0.8rem;
   font-family: sans-serif;
   font-weight: 800px;
   padding-right: 30px;
@@ -171,7 +265,7 @@ main {
 }
 
 .delivery-container .icon img {
-  border: 8px solid #F4DFF3; 
+  border: 8px solid #F4DFF3;
   border-radius: 50%;
   max-width: 70px;
 }
@@ -205,12 +299,13 @@ main {
   position: relative;
   display: inline-block;
   width: 65%;
-  margin-left: auto; 
-  margin-right: 0; 
+  margin-left: auto;
+  margin-right: 0;
   text-align: right;
   bottom: 20px;
   left: 100px;
 }
+
 .contact-container {
   display: flex;
   align-items: center;
@@ -298,13 +393,13 @@ main {
   font-size: 1rem;
 }
 
-.profile-job .violet{
+.profile-job .violet {
   margin: 0;
   color: #B11CAB;
   font-size: 0.7rem;
 }
 
-.profile-job .orange{
+.profile-job .orange {
   margin: 0;
   color: #F27123;
   font-size: 0.6rem;
@@ -329,7 +424,7 @@ main {
 
 .especialitats-box,
 .ortopedia-box,
-.mutues-box{
+.mutues-box {
   padding: 5px;
   padding-left: 1.563rem;
   padding-right: 1.563rem;
@@ -363,7 +458,8 @@ main {
   display: flex;
   justify-content: space-between;
 }
-.wrapper h3{
+
+.wrapper h3 {
   margin-bottom: 1rem;
 }
 
@@ -383,6 +479,7 @@ main {
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
+
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }
@@ -435,9 +532,10 @@ main {
   color: #333;
   font-size: 0.8rem;
   display: flex;
-  justify-content:start;
+  justify-content: start;
   align-items: center;
 }
+
 .carousel .card.active {
   height: 300px;
   background-color: #B11CAB;
@@ -449,13 +547,14 @@ main {
 }
 
 .carousel .card .ver-mas {
-  margin-top: 20px; 
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0.8rem;;
-  text-decoration: underline; 
+  font-size: 0.8rem;
+  ;
+  text-decoration: underline;
 }
 
 .carousel .card .ver-menos-text {
@@ -475,11 +574,11 @@ main {
   height: 3.2rem;
   max-width: 3.75rem;
   max-height: 3.75rem;
-  min-width: 3rem;        
-  min-height: 3rem;       
+  min-width: 3rem;
+  min-height: 3rem;
   border-radius: 50%;
   background-color: #F27123;
-  margin: 0 auto 10px auto; 
+  margin: 0 auto 10px auto;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   display: flex;
@@ -491,15 +590,16 @@ main {
 .circle-icon {
   width: 60%;
   height: 60%;
-  object-fit: contain; 
+  object-fit: contain;
 }
- .card.active .circle {
+
+.card.active .circle {
   background-color: white;
 }
 
 .card.active .circle-icon {
   filter: invert(11%) sepia(33%) saturate(10022%) hue-rotate(283deg) brightness(80%) contrast(98%);
-} 
+}
 
 /* Descripción de las especialitats (escondidas por default) */
 .description-card {
@@ -536,7 +636,7 @@ main {
   margin: 0.8rem;
   margin-top: 1rem;
   flex: 1;
-  align-items: flex-start; 
+  align-items: flex-start;
   position: relative;
 }
 
@@ -550,9 +650,11 @@ main {
   max-width: 25rem;
   color: #F27123;
 }
+
 .description-text p.tic {
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
 }
+
 .description-text p {
   margin-bottom: 1.875rem;
   max-width: 28rem;
@@ -566,27 +668,33 @@ main {
   height: auto;
   object-fit: cover;
   flex: 1;
-}
 
-.description-card img {
   max-width: 40%;
   height: auto;
   filter: brightness(0.85);
 }
 
-.description-text .podiatry-category{
+/* .description-card img {
+  max-width: 40%;
+  height: auto;
+  filter: brightness(0.85);
+} */
+
+.description-text .podiatry-category {
   color: #B11CAB;
   font-size: 0.9rem;
 }
-.description-text .podiatry-content{
+
+.description-text .podiatry-content {
   max-width: 100%;
 }
-.podologia-img{
+
+.podologia-img {
   position: absolute;
-  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
-  right: 80px; /* Ajusta la distancia desde la parte derecha */
-  width: 100%; /* Tamaño adecuado */
-  height: auto; /* Mantener proporción */
+  bottom: 10px;
+  right: 80px;
+  width: 100%;
+  height: auto;
 }
 
 #ortopedia {
@@ -662,8 +770,9 @@ main {
   aspect-ratio: 4/3;
   object-fit: contain;
 }
+
 .mutue-logo {
-padding: 2rem;
+  padding: 2rem;
 }
 
 footer {
@@ -748,7 +857,7 @@ footer {
   border-top: 0.5px solid white;
 }
 
-/* Responsividad */ 
+/* Responsividad */
 @media (max-width: 1600px) {
   .card {
     font-size: 0.9rem;
@@ -759,15 +868,16 @@ footer {
   }
 
   #especialitats {
-    max-width: 75%;
+    max-width: 80%;
   }
 }
 
-@media (max-width: 1440px) { /* large desktop */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  /* large desktop */
 
-   header {
+  header {
     font-size: 0.9rem;
-  } 
+  }
 
   nav ul li {
     margin: 0.8rem;
@@ -775,16 +885,18 @@ footer {
 
   #hero {
     width: 90%;
+    margin-top: 5rem;
   }
 
   #hero h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     max-width: 40rem;
   }
 
   #hero p {
-    font-size: 0.8rem;
-    max-width: 30rem;
+    font-size: 1rem;
+    max-width: 35rem;
+    margin-bottom: 2rem;
   }
 
   .CTA {
@@ -814,6 +926,7 @@ footer {
 
   #especialitats {
     max-width: 85%;
+    padding-top: 2rem;
   }
 
   .card {
@@ -844,44 +957,18 @@ footer {
     font-size: 0.8rem;
   }
 }
-@media (max-width: 1280px) { /* small desktop */
-  .podologia-img{
-    display: none;
-  }
-}
 
-@media (max-width: 768px) { /* tablet */
-  header {
-    flex-direction: column;
-    padding: 1.25rem;
-    margin: 0.625rem;
-  }
-
-  .logo {
-    margin: 0.625rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* small desktop */
+@media (min-width: 970px) and (max-width: 1280px) {
   #hero h2 {
-    font-size: 2rem;
-    max-width: 100%;
+    font-size: 3rem;
+    max-width: 40rem;
   }
 
-  #hero p,
-  .phone-number {
-    font-size: 1rem;
-  }
-
-  .CTA {
-    padding: 0.625rem 1.25rem;
-  }
-
-  .profile-card {
-    width: 100%;
+  #hero p {
+    font-size: 0.9rem;
+    max-width: 35rem;
+    margin-bottom: 2rem;
   }
 
   #especialitats {
@@ -894,9 +981,122 @@ footer {
     padding: 1rem;
   }
 
+  .description-card {
+    font-size: 0.8rem;
+  }
+
+  .description-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .description-text .podiatry-category {
+    color: #B11CAB;
+    font-size: 0.8rem;
+  }
+
+  .description-text h5 {
+    font-size: 1.1rem;
+    max-width: 25rem;
+    color: #F27123;
+  }
+
+  .podologia-img {
+    display: none;
+  }
+}
+
+/* tablet */
+@media (min-width: 611px) and (max-width: 969px) {
+  .logo {
+    margin: 0.625rem;
+  }
+
+  header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .side-menu.open {
+    right: 0;
+  }
+
+  #hero {
+    margin-top: 3rem;
+  }
+
+  #hero .underline {
+    width: 75%;
+    left: 5px;
+  }
+
+  #hero h2 {
+    font-size: 3rem;
+    max-width: 80%;
+  }
+
+  #hero p,
+  .phone-number {
+    font-size: 1rem;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  #especialitats {
+    max-width: 80%;
+  }
+
+  .wrapper .carousel {
+    grid-auto-columns: calc((100%) - 0px);
+    gap: 18px;
+  }
+
+  .card {
+    font-size: 0.75rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .description.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .podologia-img {
+    display: none;
+  }
+
+  .description-image {
+    order: 1;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-right: 3rem;
+  }
+
+  .description-text {
+    order: 2;
+    text-align: left;
+  }
+
+  .description.active .CTA {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
   .ortopedia-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .text-container,
@@ -905,24 +1105,248 @@ footer {
   }
 
   .ortopedia-image {
-    margin-left: -2.5rem;
-    margin-top: 1.25rem;
+    margin-left: -1.5rem;
+    margin-top: 1.5rem;
   }
 
+
+  #mutues {
+    padding: 1rem;
+    border-radius: 0.625rem;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mutues-content p {
+    margin-bottom: 2rem;
+  }
+
+  .mutues-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .mutues-logo {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+  }
+
+  .mutue-logo {
+    padding: 1.5rem;
+    max-width: 150px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+  }
+
+  #footer-service {
+    max-width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  #footer-links {
+    margin-left: 0rem;
+    width: 100%;
+  }
+  #footer-map {
+    margin-left: 0rem;
+    width: 100%;
+  }
 }
 
-@media (max-width: 480px) { /* mobile */
-  .phone-box {
-    width: 3.125rem;
-    height: 3.125rem;
+@media (max-width: 610px) {
+  .inicio-container {
+    background-image: none;
   }
 
-  .CTA {
-    padding: 0.625rem;
-    font-size: 0.875rem;
+  
+  .logo {
+    margin: 0.625rem;
+  }
+  
+  header {
+    display: none;
   }
 
+  .mobile-header {
+    display: flex;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .side-menu.open {
+    right: 0;
+  }
+  
+  #hero {
+    margin-top: 3rem;
+  }
+  
+  #hero .underline {
+    width: 75%;
+    left: 5px;
+  }
+  
+  #hero h2 {
+    font-size: 2rem;
+    max-width: 90%;
+  }
+
+  #hero p,
+  .phone-number {
+    font-size: 1rem;
+  }
+  
+  .contact-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1.875rem;
+    padding: 2rem;
+    background-image: url('cadira2.png');
+    background-size: cover;
+    background-position: top center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+  
+  #especialitats {
+    max-width: 80%;
+  }
+  
+  .wrapper .carousel {
+    grid-auto-columns: calc((100%) - 0px);
+    gap: 18px;
+  }
+  
   .card {
-    padding: 0.625rem;
+    font-size: 0.75rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .description.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .podologia-img {
+    display: none;
+  }
+
+  .description-image {
+    order: 1;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-right: 3rem;
+  }
+
+  .description-text {
+    order: 2;
+    text-align: left;
+  }
+
+  .description.active .CTA {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .ortopedia-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .text-container,
+  .ortopedia-image {
+    max-width: 100%;
+  }
+
+  .ortopedia-image {
+    margin-left: -1.5rem;
+    margin-top: 1.5rem;
+  }
+
+
+  #mutues {
+    padding: 1rem;
+    border-radius: 0.625rem;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .mutues-content p {
+    margin-bottom: 2rem;
+  }
+
+  .mutues-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .mutues-logo {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+  }
+
+  .mutue-logo {
+    padding: 1.5rem;
+    max-width: 150px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+  }
+
+  #footer-service {
+    max-width: 100%;
+    margin: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  #footer-links {
+    margin-left: 0rem;
+    width: 100%;
+  }
+  #footer-map {
+    margin-left: 0rem;
+    width: 100%;
   }
 }
