@@ -154,7 +154,6 @@ nav ul li a:hover {
 
 .close-btn {
   display: none;
-  /* Inicialmente no visible */
   background: none;
   border: none;
   cursor: pointer;
@@ -164,10 +163,8 @@ nav ul li a:hover {
   top: 1rem;
   right: 1rem;
   z-index: 102;
-  /* Asegurarse de que esté encima del contenido */
 }
 
-/* Mostrar el botón de la cruz solo cuando el menú está abierto */
 .side-menu.open .close-btn {
   display: block;
 }
@@ -308,10 +305,13 @@ main {
 
 .contact-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-top: 1.875rem;
 }
-
+.contact-content{
+  display: flex;
+  align-items: center;
+}
 .CTA {
   background-color: #B11CAB;
   color: white;
@@ -1174,7 +1174,6 @@ footer {
   .inicio-container {
     background-image: none;
   }
-
   
   .logo {
     margin: 0.625rem;
@@ -1186,6 +1185,8 @@ footer {
 
   .mobile-header {
     display: flex;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   
   nav {
@@ -1198,6 +1199,7 @@ footer {
   
   #hero {
     margin-top: 3rem;
+    margin-left: 1rem;
   }
   
   #hero .underline {
@@ -1217,22 +1219,57 @@ footer {
   
   .contact-container {
     display: flex;
-    align-items: center;
+    align-items: left; 
     margin-top: 1.875rem;
     padding: 2rem;
     background-image: url('cadira2.png');
     background-size: cover;
     background-position: top center;
+    border-radius: 0.5rem;
+   
+    flex-wrap: wrap;
+    max-width: 100%;
     flex-direction: column;
+    margin-left: -rem;
+  }
+
+  .CTA {
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.125rem;
+    max-width: 70%;
+  }
+  .contact-content{
+    margin-left: -1.75rem;
+  }
+  .phone-box {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    width: 3rem;
+    height: 3rem;
+  }
+  .phone-icon {
+    max-width: 100%;
+  }
+
+  .phone-number {
+    color: black;
+    font-size: 0.8rem;
   }
 
   .profile-card {
     width: 100%;
+    max-width:  100%;
+    margin-left: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   }
   
   #especialitats {
-    max-width: 80%;
+    max-width: 100%;
+   
   }
   
   .wrapper .carousel {
