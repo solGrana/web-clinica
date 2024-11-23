@@ -25,7 +25,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Estilos para el header */
 header {
   background-color: white;
   padding: 0.3rem;
@@ -674,12 +673,6 @@ main {
   filter: brightness(0.85);
 }
 
-/* .description-card img {
-  max-width: 40%;
-  height: auto;
-  filter: brightness(0.85);
-} */
-
 .description-text .podiatry-category {
   color: #B11CAB;
   font-size: 0.9rem;
@@ -1186,7 +1179,7 @@ footer {
   .mobile-header {
     display: flex;
     padding-right: 1rem;
-    padding-left: 1rem;
+    margin-left: -3.5rem;
   }
   
   nav {
@@ -1199,7 +1192,7 @@ footer {
   
   #hero {
     margin-top: 3rem;
-    margin-left: 1rem;
+    margin-left: -0.3rem;
   }
   
   #hero .underline {
@@ -1218,26 +1211,30 @@ footer {
   }
   
   .contact-container {
+    height: 15rem;
     display: flex;
     align-items: left; 
+    justify-content: center;
     margin-top: 1.875rem;
-    padding: 2rem;
-    background-image: url('cadira2.png');
-    background-size: cover;
-    background-position: top center;
-    border-radius: 0.5rem;
-   
+    width: 100vw; 
+    position: relative;
+    left: calc(-3.125rem); 
+    padding: 2rem 3.125rem;
+    box-sizing: border-box;
+    background-image: url('cadira2.png'); 
+    background-size: cover; 
+    background-position: top center; 
+
     flex-wrap: wrap;
-    max-width: 100%;
     flex-direction: column;
-    margin-left: -rem;
   }
+  
 
   .CTA {
     padding: 0.8rem 1rem;
     font-size: 0.8rem;
     margin-bottom: 1.125rem;
-    max-width: 70%;
+    max-width: 200px;
   }
   .contact-content{
     margin-left: -1.75rem;
@@ -1272,15 +1269,28 @@ footer {
    
   }
   
-  .wrapper .carousel {
-    grid-auto-columns: calc((100%) - 0px);
-    gap: 18px;
+  .wrapper {
+    height: auto; /* Permite que el contenedor crezca con el contenido */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos internos estén en una columna */
+    align-items: center; /* Centra las tarjetas en la pantalla */
   }
-  
-  .card {
-    font-size: 0.75rem;
-    width: 100%;
-    padding: 1rem;
+
+  .wrapper .carousel {
+    display: flex; /* Cambia de grid a flexbox */
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    gap: 1rem; /* Espaciado entre tarjetas */
+    overflow-x: visible; /* Permite que todo sea visible */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  }
+
+  .carousel .card {
+    width: calc(100% - 2rem); /* Reduce el ancho de cada tarjeta para dejar márgenes */
+    margin: 0 auto; /* Centra cada tarjeta horizontalmente */
+  }
+
+  .wrapper i {
+    display: none; /* Oculta las flechas de navegación */
   }
   
   .description.active {
@@ -1315,6 +1325,9 @@ footer {
   .ortopedia-content {
     flex-direction: column;
     text-align: left;
+    max-width: 100%;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .text-container,
@@ -1332,8 +1345,8 @@ footer {
     padding: 1rem;
     border-radius: 0.625rem;
     text-align: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
     margin-bottom: 3rem;
   }
 
@@ -1355,12 +1368,12 @@ footer {
 
   .mutue-logo {
     padding: 1.5rem;
-    max-width: 150px;
+    max-width: 130px;
   }
 
   .footer-container {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -1383,7 +1396,13 @@ footer {
     width: 100%;
   }
   #footer-map {
+    max-width: 100%;
     margin-left: 0rem;
-    width: 100%;
+  }
+  #footer-map iframe {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    border: none;
   }
 }
