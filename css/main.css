@@ -1236,7 +1236,8 @@ footer {
     top: -5%; 
     left: 45%; 
     transform: translateX(-50%);
-    width: 700px;
+    width: 120%;
+    max-width: 700px;
     height: 120%; 
     background-image: url('cadira2.png'); 
     background-size: cover; 
