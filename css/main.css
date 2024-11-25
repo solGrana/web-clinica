@@ -102,6 +102,7 @@ nav ul li a:hover {
   background: none;
   border: none;
   cursor: pointer;
+  margin-right: -1rem;
 }
 
 .hamburger span {
@@ -1189,10 +1190,16 @@ footer {
   .side-menu.open {
     right: 0;
   }
-  
+  main {
+    padding: 0rem;
+    z-index: 1;
+  }
   #hero {
     margin-top: 3rem;
-    margin-left: -0.3rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+
+    width: 100%;
   }
   
   #hero .underline {
@@ -1201,7 +1208,7 @@ footer {
   }
   
   #hero h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     max-width: 90%;
   }
 
@@ -1213,31 +1220,42 @@ footer {
   .contact-container {
     height: 15rem;
     display: flex;
-    align-items: left; 
+    align-items: flex-start; 
     justify-content: center;
     margin-top: 1.875rem;
-    width: 100vw; 
+    width: 100%; 
     position: relative;
-    left: calc(-3.125rem); 
     padding: 2rem 3.125rem;
     box-sizing: border-box;
-    background-image: url('cadira2.png'); 
-    background-size: cover; 
-    background-position: top center; 
-
     flex-wrap: wrap;
     flex-direction: column;
   }
-  
+  .contact-container::before {
+    content: ""; 
+    position: absolute;
+    top: -5%; 
+    left: 45%; 
+    transform: translateX(-50%);
+    width: 700px;
+    height: 120%; 
+    background-image: url('cadira2.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    z-index: -1;
+}
+
 
   .CTA {
     padding: 0.8rem 1rem;
     font-size: 0.8rem;
     margin-bottom: 1.125rem;
     max-width: 200px;
+    margin-left: -3.4rem;
+
   }
   .contact-content{
-    margin-left: -1.75rem;
+    margin-left: -5rem;
   }
   .phone-box {
     display: flex;
@@ -1258,7 +1276,7 @@ footer {
   .profile-card {
     width: 100%;
     max-width:  100%;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     margin-top: 3rem;
     margin-bottom: 0rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -1270,27 +1288,27 @@ footer {
   }
   
   .wrapper {
-    height: auto; /* Permite que el contenedor crezca con el contenido */
+    height: auto; 
     display: flex;
-    flex-direction: column; /* Asegura que los elementos internos estén en una columna */
-    align-items: center; /* Centra las tarjetas en la pantalla */
+    flex-direction: column; 
+    align-items: center;
   }
 
   .wrapper .carousel {
-    display: flex; /* Cambia de grid a flexbox */
-    flex-direction: column; /* Apila las tarjetas verticalmente */
-    gap: 1rem; /* Espaciado entre tarjetas */
-    overflow-x: visible; /* Permite que todo sea visible */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    display: flex; 
+    flex-direction: column;
+    gap: 1rem; 
+    overflow-x: visible;
+    width: 100%; 
   }
 
   .carousel .card {
-    width: calc(100% - 2rem); /* Reduce el ancho de cada tarjeta para dejar márgenes */
-    margin: 0 auto; /* Centra cada tarjeta horizontalmente */
+    width: calc(100% - 2rem); 
+    margin: 0 auto; 
   }
 
   .wrapper i {
-    display: none; /* Oculta las flechas de navegación */
+    display: none; 
   }
   
   .description.active {
