@@ -451,9 +451,13 @@ main {
   font-size: 0.75rem;
 }
 
+.cards-mobile{
+  display: none;
+}
+
 .wrapper {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -517,7 +521,7 @@ main {
   align-items: center;
 }
 
-.carousel .card {
+.card {
   scroll-snap-align: start;
   height: 280px;
   cursor: pointer;
@@ -535,8 +539,7 @@ main {
   justify-content: start;
   align-items: center;
 }
-
-.carousel .card.active {
+.card.active {
   height: 300px;
   background-color: #B11CAB;
   color: white;
@@ -546,7 +549,7 @@ main {
   border-bottom: none;
 }
 
-.carousel .card .ver-mas {
+.card .ver-mas {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -557,15 +560,15 @@ main {
   text-decoration: underline;
 }
 
-.carousel .card .ver-menos-text {
+.card .ver-menos-text {
   display: none;
 }
 
-.carousel .card.active .ver-menos-text {
+.card.active .ver-menos-text {
   display: block;
 }
 
-.carousel .card.active .ver-mas-text {
+.card.active .ver-mas-text {
   display: none;
 }
 
@@ -696,7 +699,7 @@ main {
   margin: 0 auto;
   max-width: 70%;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .ortopedia-content {
@@ -1237,7 +1240,7 @@ footer {
     left: 45%; 
     transform: translateX(-50%);
     width: 120%;
-    max-width: 700px;
+    max-width: 40.625rem;
     height: 120%; 
     background-image: url('cadira2.png'); 
     background-size: cover; 
@@ -1285,16 +1288,24 @@ footer {
   
   #especialitats {
     max-width: 100%;
-   
   }
-  
-  .wrapper {
-    height: auto; 
+  .cards-mobile{
     display: flex;
     flex-direction: column; 
+    height: auto; 
     align-items: center;
+    gap: 18px;
   }
-
+  .card{
+    font-size: 0.8rem;
+  }
+  .wrapper {
+    display: none;
+    /*     flex-direction: column; 
+    height: auto; 
+    align-items: center; */
+  }
+/* 
   .wrapper .carousel {
     display: flex; 
     flex-direction: column;
@@ -1304,20 +1315,33 @@ footer {
   }
 
   .carousel .card {
-    width: calc(100% - 2rem); 
+    width: 110%; 
     margin: 0 auto; 
   }
 
   .wrapper i {
     display: none; 
+  } */
+  .extra-content {
+    display: none; /* Ocultar por defecto */
+    margin-top: 16px;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
   }
-  
   .description.active {
     display: flex;
-    flex-direction: column;
+/*     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
+.description-card {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
 
   .podologia-img {
     display: none;

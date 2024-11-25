@@ -71,7 +71,10 @@ function showDescription(especialitat) {
             selectedDescription.classList.add("active");
         }
     }
-    window.location.href = "#especialitats";
+
+    if (window.innerWidth > 611) {
+        window.location.href = "#especialitats";
+    }
 }
 
 // Selecciona el tooltip y el contenedor

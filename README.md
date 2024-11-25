@@ -34,4 +34,3 @@ La web está diseñada para ser moderna, accesible y fácil de navegar.
 ```
 
 3. Abrir el archivo index.html en el navegador para ver el sitio web localmente.
-
