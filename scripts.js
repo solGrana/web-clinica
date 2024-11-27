@@ -143,3 +143,135 @@ closeBtn.addEventListener('click', () => {
   sideMenu.classList.remove('open');
 });
 
+/* const descriptions = {
+    quiropidia: `<div>
+                    <h4>Quiropidia</h4>
+                    <p>La quiropòdia és un tractament podològic que consisteix en l'eliminació de callositats i alteracions a les ungles dels peus amb l'objectiu d'evitar que aquestes lesions lleus s'agreugin i derivin en altres de més rellevància.</p>
+                    <button class="CTA">Contacta't amb nosaltres</button>
+                 </div>`,
+    exploracio: `<div>
+                    <h4>Exploració Biomecànica</h4>
+                    <p>És un examen podològic que avalua la forma en què el cos es mou i com això afecta l'estructura i la funció del cos.</p>
+                    <button class="CTA">Contacta't amb nosaltres</button>
+                 </div>`,
+    // Añade más descripciones según sea necesario
+};
+
+function showDescriptionmobile(cardId) {
+    // Encuentra la tarjeta clickeada
+    const card = document.getElementById(cardId);
+
+    // Encuentra el contenedor de descripción dentro de esa tarjeta
+    const descriptionContainer = card.querySelector('.description-container');
+
+    // Si ya está visible, la ocultamos
+    if (descriptionContainer.classList.contains('active')) {
+        descriptionContainer.classList.remove('active');
+        descriptionContainer.innerHTML = '';
+    } else {
+        // Oculta cualquier otra descripción activa
+        document.querySelectorAll('.description-container.active').forEach((el) => {
+            el.classList.remove('active');
+            el.innerHTML = '';
+        });
+
+        // Agrega el contenido y muestra la descripción
+        descriptionContainer.innerHTML = descriptions[cardId];
+        descriptionContainer.classList.add('active');
+    }
+}
+ */
+
+const descriptions = [
+    {
+        id: "quiropidia",
+        title: "Quiropidia",
+        text: "La quiropòdia és un tractament podològic que consisteix en l'eliminació de callositats i alteracions a les ungles dels peus amb l'objectiu d'evitar que aquestes lesions lleus s'agreugin i derivin en altres de més rellevància.",
+        image: "images/quiropidia.png",
+        alt: "Descripción Quiropidia"
+    },
+    {
+        id: "exploracio",
+        title: "Exploració Biomecànica",
+        text: "És un examen/estudi podològic que avalua la forma en què el cos es mou i com això afecta l'estructura i la funció del cos. En el cas dels peus, una exploració biomecànica inclou una anàlisi detallada de la petjada i la manera com el teu cos s'ajusta a la superfície on camines.",
+        image: "images/quiropidia.png",
+        alt: "Descripción Exploració Biomecànica"
+    },
+    {
+        id: "ortopodologia",
+        title: "Ortopodologia",
+        text: `L'ortopodologia es basa en el tractament de les alteracions mecàniques del peu, és a dir, de les alteracions que influeixen en la funció correcta del peu durant la marxa. El tractament d’aquestes alteracions és mitjançant:
+            <h5>Per què triar-nos?</h5>
+            <p class="tic"><img src="images/tic.png"> Plantilles ortopèdiques a mida.</p>
+            <p><img src="images/tic.png"> Órtesis de silicona. </p>`,
+        image: "images/plantillas-ortopedicas.png",
+        alt: "Descripción Ortopodologia"
+    },
+    {
+        id: "podologia",
+        title: "Podologia",
+        text: `<span class="podiatry-category">PODOLOGIA PEDIÀTRICA </span>
+            <span><img src="images/arrow-especialidad.png"> Especialitzada al peu del nen i les seves afeccions més comunes.</span><br><br>
+            <span class="podiatry-category">PODOLOGIA ESPORTIVA </span>
+            <span><img src="images/arrow-especialidad.png"> Especialitzada en el gest de l'esportista i en les afeccions més comunes. Prevenció i tractament de les lesions de l'esportista.</span><br><br>
+            <span class="podiatry-category">PODOLOGIA GERIÀTRICA</span>
+            <span><img src="images/arrow-especialidad.png"> Especialitzada en el peu de la gent gran. Prevenció i cura de les patologies.</span>
+            <h5>Per què triar-nos?</h5>
+            <p class="tic"><img src="images/tic.png"> Promoció de la salut integral.</p>
+            <p class="tic"><img src="images/tic.png"> Prevenció d'afeccions i deformitats del peu.</p>
+            <p><img src="images/tic.png"> Donar resposta mitjançant tècniques diagnòstiques i tractaments adequats.</p>`,
+        image: "images/podologia.png",
+        alt: "Descripción Podologia"
+    },
+    {
+        id: "piediabetico",
+        title: "Peu Diabétic",
+        text: `El peu diabètic o síndrome del peu diabètic fa referència a la presència d'infecció, ulceració o destrucció dels teixits del peu associada a neuropatia perifèrica i/o malaltia arterial perifèrica de les extremitats inferiors de les persones amb diabetis mellitus.<br><br>
+            Cura del peu diabètic i tractament preventiu d’úlceres vasculars i neuropàtiques.<br>
+            <p class="tic"><img src="images/tic.png"> Adscrita en el PEU DIABÈTIC del CATSALUT des del 2009.</p>`,
+        image: "images/piediabetico.png",
+        alt: "Descripción Peu Diabétic"
+    }
+
+];
+function showDescriptionMobile(cardId) {
+    // Encuentra la tarjeta clickeada
+    const card = document.getElementById(cardId);
+
+    // Encuentra el contenedor de descripción dentro de esa tarjeta
+    const descriptionContainer = card.querySelector('.description-container');
+
+    // Si ya está visible, la ocultamos
+    if (descriptionContainer.classList.contains('active')) {
+        descriptionContainer.classList.remove('active');
+        card.classList.remove('active'); // Quita el color violeta de la tarjeta
+        descriptionContainer.innerHTML = '';
+    } else {
+        // Oculta cualquier otra descripción activa y remueve el color violeta de otras tarjetas
+        document.querySelectorAll('.description-container.active').forEach((el) => {
+            el.classList.remove('active');
+            el.innerHTML = '';
+            el.closest('.card').classList.remove('active'); // Quita el color de la tarjeta asociada
+        });
+
+        // Busca la descripción correspondiente en el array de objetos
+        const description = descriptions.find(desc => desc.id === cardId);
+
+        if (description) {
+            // Agrega el contenido dinámicamente y muestra la descripción
+            descriptionContainer.innerHTML = `
+                <div class="description-text">
+                    <h4>${description.title}</h4>
+                    <p>${description.text}</p>
+                    <button class="CTA">Contacta't amb nosaltres</button>
+                </div>
+                <img src="${description.image}" alt="${description.alt}" class="description-image">
+            `;
+            descriptionContainer.classList.add('active');
+            card.classList.add('active'); // Agrega el color violeta a la tarjeta clickeada
+        } else {
+            console.error(`Descripción no encontrada para el ID: ${cardId}`);
+        }
+    }
+}
+

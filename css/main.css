@@ -308,10 +308,12 @@ main {
   align-items: left;
   margin-top: 1.875rem;
 }
-.contact-content{
+
+.contact-content {
   display: flex;
   align-items: center;
 }
+
 .CTA {
   background-color: #B11CAB;
   color: white;
@@ -451,7 +453,7 @@ main {
   font-size: 0.75rem;
 }
 
-.cards-mobile{
+.cards-mobile {
   display: none;
 }
 
@@ -538,9 +540,12 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
+
+  position: relative;
 }
+
 .card.active {
-  height: 300px;
+  height: auto;
   background-color: #B11CAB;
   color: white;
   margin-bottom: -1.563rem;
@@ -1161,6 +1166,7 @@ footer {
     margin-left: 0rem;
     width: 100%;
   }
+
   #footer-map {
     margin-left: 0rem;
     width: 100%;
@@ -1171,11 +1177,11 @@ footer {
   .inicio-container {
     background-image: none;
   }
-  
+
   .logo {
     margin: 0.625rem;
   }
-  
+
   header {
     display: none;
   }
@@ -1185,31 +1191,32 @@ footer {
     padding-right: 1rem;
     margin-left: -3.5rem;
   }
-  
+
   nav {
     display: none;
   }
-  
+
   .side-menu.open {
     right: 0;
   }
+
   main {
     padding: 0rem;
     z-index: 1;
   }
+
   #hero {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-left: 0rem;
     margin-right: 0rem;
-
     width: 100%;
   }
-  
+
   #hero .underline {
     width: 75%;
     left: 5px;
   }
-  
+
   #hero h2 {
     font-size: 2.5rem;
     max-width: 90%;
@@ -1219,36 +1226,36 @@ footer {
   .phone-number {
     font-size: 1rem;
   }
-  
+
   .contact-container {
     height: 15rem;
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: center;
     margin-top: 1.875rem;
-    width: 100%; 
+    width: 100%;
     position: relative;
     padding: 2rem 3.125rem;
     box-sizing: border-box;
     flex-wrap: wrap;
     flex-direction: column;
   }
+
   .contact-container::before {
-    content: ""; 
+    content: "";
     position: absolute;
-    top: -5%; 
-    left: 45%; 
+    top: -5%;
+    left: 45%;
     transform: translateX(-50%);
     width: 120%;
     max-width: 40.625rem;
-    height: 120%; 
-    background-image: url('cadira2.png'); 
-    background-size: cover; 
+    height: 120%;
+    background-image: url('cadira2.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
     z-index: -1;
-}
-
+  }
 
   .CTA {
     padding: 0.8rem 1rem;
@@ -1256,11 +1263,12 @@ footer {
     margin-bottom: 1.125rem;
     max-width: 200px;
     margin-left: -3.4rem;
-
   }
-  .contact-content{
+
+  .contact-content {
     margin-left: -5rem;
   }
+
   .phone-box {
     display: flex;
     align-items: center;
@@ -1268,6 +1276,7 @@ footer {
     width: 3rem;
     height: 3rem;
   }
+
   .phone-icon {
     max-width: 100%;
   }
@@ -1279,85 +1288,95 @@ footer {
 
   .profile-card {
     width: 100%;
-    max-width:  100%;
+    max-width: 100%;
     margin-left: 0.3rem;
     margin-top: 3rem;
     margin-bottom: 0rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   }
-  
+
   #especialitats {
     max-width: 100%;
   }
-  .cards-mobile{
+
+  .cards-mobile {
     display: flex;
-    flex-direction: column; 
-    height: auto; 
+    flex-direction: column;
+    height: auto;
     align-items: center;
     gap: 18px;
+    max-width: 100%;
   }
-  .card{
+
+  .card {
     font-size: 0.8rem;
+    position: relative;
+    max-width: 100%;
+
+    overflow: hidden;
+    height: auto;
   }
+
+  .card.active {
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+  }
+
   .wrapper {
     display: none;
-    /*     flex-direction: column; 
-    height: auto; 
-    align-items: center; */
-  }
-/* 
-  .wrapper .carousel {
-    display: flex; 
-    flex-direction: column;
-    gap: 1rem; 
-    overflow-x: visible;
-    width: 100%; 
   }
 
-  .carousel .card {
-    width: 110%; 
-    margin: 0 auto; 
-  }
-
-  .wrapper i {
-    display: none; 
-  } */
-  .extra-content {
-    display: none; /* Ocultar por defecto */
-    margin-top: 16px;
-    border-top: 1px solid #ccc;
-    padding-top: 8px;
-  }
-  .description.active {
-    display: flex;
-/*     flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-  }
-.description-card {
+  .description-container {
     display: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-  .podologia-img {
-    display: none;
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border: 2px solid #B11CAB;
+    border-radius: 0.625rem;
+    margin-top: 1rem;
+    max-width: 125%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+    width: 115%;
+    overflow: hidden;
   }
 
-  .description-image {
-    order: 1;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin-right: 3rem;
+  .description-container.active {
+    display: block;
   }
 
   .description-text {
-    order: 2;
+    background-color: #f0f0f5;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
     text-align: left;
+    color: #333;
+  }
+
+  .description-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  .description-container .CTA {
+    margin-left: 0rem;
+
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.125rem;
+    max-width: 100%;
+  }
+
+  .podologia-img {
+    display: none;
   }
 
   .description.active .CTA {
@@ -1438,14 +1457,16 @@ footer {
     margin-left: 0rem;
     width: 100%;
   }
+
   #footer-map {
     max-width: 100%;
     margin-left: 0rem;
   }
+
   #footer-map iframe {
-    width: 100%; 
-    height: auto; 
-    max-width: 100%; 
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     border: none;
   }
 }
