@@ -263,9 +263,9 @@ function showDescriptionMobile(cardId) {
                 <div class="description-text">
                     <h4>${description.title}</h4>
                     <p>${description.text}</p>
+                    </div>
+                    <img src="${description.image}" alt="${description.alt}" class="description-image">
                     <button class="CTA">Contacta't amb nosaltres</button>
-                </div>
-                <img src="${description.image}" alt="${description.alt}" class="description-image">
             `;
             descriptionContainer.classList.add('active');
             card.classList.add('active'); // Agrega el color violeta a la tarjeta clickeada

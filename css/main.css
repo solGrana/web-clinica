@@ -1360,7 +1360,7 @@ footer {
   }
 
   .description-image {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     margin-top: 0.5rem;
     border-radius: 8px;
