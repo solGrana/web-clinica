@@ -1319,7 +1319,10 @@ footer {
 
   .card.active {
     padding-bottom: 0;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    border-radius: 0.625rem;
+
+    width: 100%;
   }
 
   .wrapper {
@@ -1469,4 +1472,25 @@ footer {
     max-width: 100%;
     border: none;
   }
+}
+
+@media (max-width: 449px) {
+
+
+  .cards-mobile {
+    max-width: 110%;
+  }
+
+  .card {
+    max-width: 110%;
+  }
+
+  .card.active {
+    width: 110%;
+  }
+
+  .description-container {
+    width: 120%;
+  }
+
 }
