@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #B11CAB;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@ body {
 }
 
 .inicio-container {
-  background-image: url('cadira2.png');
+  background-image: url('cadira2.webp');
   width: 100%;
   min-height: calc(100vh);
   background-size: cover;
@@ -73,8 +77,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #B11CAB;
-  border-bottom: 1px solid #B11CAB;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .mobile-header {
@@ -118,7 +122,6 @@ nav ul li a:hover {
   position: fixed;
   top: 0;
   right: -100%;
-  /* fuera de pantalla */
   width: 45%;
   height: 100vh;
   background-color: #f8f8f8;
@@ -148,7 +151,7 @@ nav ul li a:hover {
 }
 
 .side-menu a:hover {
-  color: #B11CAB;
+  color: var(--primary-color);
   border-bottom: none;
 }
 
@@ -238,7 +241,7 @@ main {
   align-items: center;
   justify-content: right;
   padding-right: 16px;
-  color: #B11CAB;
+  color: var(--primary-color);
   font-size: 0.8rem;
   font-family: sans-serif;
   font-weight: 800px;
@@ -315,7 +318,7 @@ main {
 }
 
 .CTA {
-  background-color: #B11CAB;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0.625rem;
@@ -354,7 +357,7 @@ main {
 }
 
 .phone-label {
-  color: #B11CAB;
+  color: var(--primary-color);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -397,7 +400,7 @@ main {
 
 .profile-job .violet {
   margin: 0;
-  color: #B11CAB;
+  color: var(--primary-color);
   font-size: 0.7rem;
 }
 
@@ -434,7 +437,7 @@ main {
   max-width: 18.75rem;
   height: 1.875rem;
   background-color: rgba(177, 28, 203, 0.14);
-  color: #B11CAB;
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +450,7 @@ main {
 .ortopedia-box h2,
 .mutues-box h2,
 .especialitats-box h2 {
-  color: #B11CAB;
+  color: var(--primary-color);
   margin: 0;
   font-weight: 100;
   font-size: 0.75rem;
@@ -484,6 +487,7 @@ main {
   border-radius: 50%;
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+
 }
 
 .wrapper i:active {
@@ -531,8 +535,9 @@ main {
   flex-direction: column;
   background-color: white;
   border-radius: 0.625rem;
-  border: 2px solid #B11CAB;
+  border: 2px solid var(--primary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   text-align: center;
   color: #333;
@@ -545,8 +550,8 @@ main {
 }
 
 .card.active {
-  height: auto;
-  background-color: #B11CAB;
+  height: 300px;
+  background-color: var(--primary-color);
   color: white;
   margin-bottom: -1.563rem;
   border-bottom-left-radius: 0;
@@ -561,7 +566,7 @@ main {
   justify-content: center;
   cursor: pointer;
   font-size: 0.8rem;
-  ;
+
   text-decoration: underline;
 }
 
@@ -609,7 +614,6 @@ main {
   filter: invert(11%) sepia(33%) saturate(10022%) hue-rotate(283deg) brightness(80%) contrast(98%);
 }
 
-/* Descripción de las especialitats (escondidas por default) */
 .description-card {
   width: 100%;
   padding: 1.5rem;
@@ -617,7 +621,7 @@ main {
   border-radius: 0.625rem;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border: 2px solid #B11CAB;
+  border: 2px solid var(--primary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
   text-align: left;
@@ -681,11 +685,15 @@ main {
   height: auto;
   filter: brightness(0.85);
 }
+.description-card img {
+  max-width: 40%;
+}
 
 .description-text .podiatry-category {
-  color: #B11CAB;
+  color: var(--primary-color);
   font-size: 0.9rem;
 }
+
 
 .description-text .podiatry-content {
   max-width: 100%;
@@ -778,7 +786,7 @@ main {
 }
 
 footer {
-  background-color: #B11CAB;
+  background-color: var(--primary-color);
   color: white;
   padding-left: 2rem;
   padding-top: 3rem;
@@ -791,7 +799,7 @@ footer {
   align-items: flex-start;
   padding-left: 3rem;
   padding-right: 3rem;
-  background-color: #B11CAB;
+  background-color: var(--primary-color);
   font-size: 0.9rem;
 }
 
@@ -855,7 +863,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   color: white;
-  background-color: #B11CAB;
+  background-color: var(--primary-color);
   border-top: 0.5px solid white;
 }
 
@@ -944,7 +952,7 @@ footer {
   }
 
   .description-card img {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .description-image {
@@ -992,7 +1000,7 @@ footer {
   }
 
   .description-text .podiatry-category {
-    color: #B11CAB;
+    color: var(--primary-color);
     font-size: 0.8rem;
   }
 
@@ -1085,7 +1093,9 @@ footer {
     height: auto;
     margin-right: 3rem;
   }
-
+  .description-card img {
+    max-width: 80%;
+  }
   .description-text {
     order: 2;
     text-align: left;
@@ -1250,7 +1260,7 @@ footer {
     width: 120%;
     max-width: 40.625rem;
     height: 120%;
-    background-image: url('cadira2.png');
+    background-image: url('cadira2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1312,16 +1322,17 @@ footer {
     font-size: 0.8rem;
     position: relative;
     max-width: 100%;
-
     overflow: hidden;
     height: auto;
   }
-
+  
   .card.active {
     padding-bottom: 0;
     margin: 1rem;
     border-radius: 0.625rem;
-
+    height: auto;
+    
+    transition: all 0.3s ease-in-out;
     width: 100%;
   }
 
@@ -1333,7 +1344,7 @@ footer {
     display: none;
     padding: 0.8rem;
     background-color: #f8f9fa;
-    border: 2px solid #B11CAB;
+    border: 2px solid var(--primary-color);
     border-radius: 0.625rem;
     margin-top: 1rem;
     max-width: 125%;
@@ -1349,14 +1360,13 @@ footer {
   }
 
   .description-text {
-    background-color: #f0f0f5;
     padding: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0;
     align-items: center;
     justify-content: center;
     text-align: left;
     color: #333;
+    font-size: 0.8rem;
   }
 
   .description-image {
@@ -1476,6 +1486,9 @@ footer {
 
 @media (max-width: 449px) {
 
+  .profile-card .profile-description {
+    text-align: center;
+  }
 
   .cards-mobile {
     max-width: 110%;
@@ -1492,5 +1505,6 @@ footer {
   .description-container {
     width: 120%;
   }
+
 
 }

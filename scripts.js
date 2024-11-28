@@ -187,14 +187,14 @@ const descriptions = [
         id: "quiropidia",
         title: "Quiropidia",
         text: "La quiropòdia és un tractament podològic que consisteix en l'eliminació de callositats i alteracions a les ungles dels peus amb l'objectiu d'evitar que aquestes lesions lleus s'agreugin i derivin en altres de més rellevància.",
-        image: "images/quiropidia.png",
+        image: "images/quiropidia.webp",
         alt: "Descripción Quiropidia"
     },
     {
         id: "exploracio",
         title: "Exploració Biomecànica",
         text: "És un examen/estudi podològic que avalua la forma en què el cos es mou i com això afecta l'estructura i la funció del cos. En el cas dels peus, una exploració biomecànica inclou una anàlisi detallada de la petjada i la manera com el teu cos s'ajusta a la superfície on camines.",
-        image: "images/quiropidia.png",
+        image: "images/quiropidia.webp",
         alt: "Descripción Exploració Biomecànica"
     },
     {
@@ -204,7 +204,7 @@ const descriptions = [
             <h5>Per què triar-nos?</h5>
             <p class="tic"><img src="images/tic.png"> Plantilles ortopèdiques a mida.</p>
             <p><img src="images/tic.png"> Órtesis de silicona. </p>`,
-        image: "images/plantillas-ortopedicas.png",
+        image: "images/plantillas-ortopedicas.webp",
         alt: "Descripción Ortopodologia"
     },
     {
@@ -220,7 +220,7 @@ const descriptions = [
             <p class="tic"><img src="images/tic.png"> Promoció de la salut integral.</p>
             <p class="tic"><img src="images/tic.png"> Prevenció d'afeccions i deformitats del peu.</p>
             <p><img src="images/tic.png"> Donar resposta mitjançant tècniques diagnòstiques i tractaments adequats.</p>`,
-        image: "images/podologia.png",
+        image: "images/podologia.webp",
         alt: "Descripción Podologia"
     },
     {
@@ -229,7 +229,7 @@ const descriptions = [
         text: `El peu diabètic o síndrome del peu diabètic fa referència a la presència d'infecció, ulceració o destrucció dels teixits del peu associada a neuropatia perifèrica i/o malaltia arterial perifèrica de les extremitats inferiors de les persones amb diabetis mellitus.<br><br>
             Cura del peu diabètic i tractament preventiu d’úlceres vasculars i neuropàtiques.<br>
             <p class="tic"><img src="images/tic.png"> Adscrita en el PEU DIABÈTIC del CATSALUT des del 2009.</p>`,
-        image: "images/piediabetico.png",
+        image: "images/piediabetico.webp",
         alt: "Descripción Peu Diabétic"
     }
 
