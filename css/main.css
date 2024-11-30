@@ -193,7 +193,7 @@ main {
   fill: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
+  z-index: 1000;
 }
 
 .delivery-container .borde-back {
@@ -401,7 +401,7 @@ main {
 .profile-job .violet {
   margin: 0;
   color: var(--primary-color);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .profile-job .orange {
@@ -412,7 +412,7 @@ main {
 
 .profile-description {
   margin-top: 1.25rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: #555;
   margin-left: -3.125rem;
 }
@@ -685,6 +685,7 @@ main {
   height: auto;
   filter: brightness(0.85);
 }
+
 .description-card img {
   max-width: 40%;
 }
@@ -1093,9 +1094,11 @@ footer {
     height: auto;
     margin-right: 3rem;
   }
+
   .description-card img {
     max-width: 80%;
   }
+
   .description-text {
     order: 2;
     text-align: left;
@@ -1314,8 +1317,8 @@ footer {
     flex-direction: column;
     height: auto;
     align-items: center;
-    gap: 18px;
-    max-width: 100%;
+    gap: 1.125rem;
+    width: 100%;
   }
 
   .card {
@@ -1325,13 +1328,13 @@ footer {
     overflow: hidden;
     height: auto;
   }
-  
+
   .card.active {
     padding-bottom: 0;
     margin: 1rem;
     border-radius: 0.625rem;
     height: auto;
-    
+
     transition: all 0.3s ease-in-out;
     width: 100%;
   }
@@ -1487,24 +1490,31 @@ footer {
 @media (max-width: 449px) {
 
   .profile-card .profile-description {
-    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .profile-job span {
+    display: block;
   }
 
   .cards-mobile {
-    max-width: 110%;
+    max-width: 100%;
   }
 
   .card {
-    max-width: 110%;
+    max-width: none;
+    width: 150%;
+    box-sizing: border-box;
+    position: relative;
+    height: auto;
+    font-size: 0.8rem;
   }
 
   .card.active {
-    width: 110%;
+    width: 150%;
   }
 
   .description-container {
     width: 120%;
   }
-
-
 }
