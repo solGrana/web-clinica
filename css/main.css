@@ -1318,6 +1318,7 @@ footer {
     margin-bottom: 1.125rem;
     max-width: 200px;
     margin-left: -3.4rem;
+    z-index: 20;
   }
 
   .contact-content {
@@ -1387,7 +1388,7 @@ footer {
 
   .description-container {
     display: none;
-    padding: 0.8rem;
+    padding: 1rem;
     background-color: #f8f9fa;
     border: 2px solid var(--primary-color);
     border-radius: 0.625rem;
@@ -1405,7 +1406,7 @@ footer {
   }
 
   .description-text {
-    padding: 0.8rem;
+    padding: 1rem;
     margin: 0;
     align-items: center;
     justify-content: center;

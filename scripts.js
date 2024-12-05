@@ -265,7 +265,7 @@ function showDescriptionMobile(cardId) {
                     <p>${description.text}</p>
                     </div>
                     <img src="${description.image}" alt="${description.alt}" class="description-image">
-                    <button class="CTA">Contacta't amb nosaltres</button>
+                    <button class="CTA" onclick="handleButtonClick(event)">Contacta't amb nosaltres</button>
             `;
             descriptionContainer.classList.add('active');
             card.classList.add('active'); // Agrega el color violeta a la tarjeta clickeada
@@ -274,4 +274,7 @@ function showDescriptionMobile(cardId) {
         }
     }
 }
-
+function handleButtonClick(event) {
+    event.stopPropagation(); 
+    window.location.href = "#footer-service";
+}
