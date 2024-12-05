@@ -16,7 +16,7 @@ body {
 }
 
 .inicio-container {
-  background-image: url('cadira2.webp');
+  background-image: url('cadira.webp');
   width: 100%;
   min-height: calc(100vh);
   background-size: cover;
@@ -1190,11 +1190,6 @@ footer {
     max-width: 150px;
   }
 
-/*   #footer-links {
-    margin-left: 0rem;
-    width: 100%;
-  } */
-
   #footer-map {
     margin-left: 0rem;
     width: 80%;
@@ -1305,7 +1300,7 @@ footer {
     width: 120%;
     max-width: 40.625rem;
     height: 120%;
-    background-image: url('cadira2.webp');
+    background-image: url('cadira.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
