@@ -194,7 +194,7 @@ const descriptions = [
         id: "exploracio",
         title: "Exploració Biomecànica",
         text: "És un examen/estudi podològic que avalua la forma en què el cos es mou i com això afecta l'estructura i la funció del cos. En el cas dels peus, una exploració biomecànica inclou una anàlisi detallada de la petjada i la manera com el teu cos s'ajusta a la superfície on camines.",
-        image: "images/quiropidia.webp",
+        image: "images/exploracio.webp",
         alt: "Descripción Exploració Biomecànica"
     },
     {
