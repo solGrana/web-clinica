@@ -10,6 +10,8 @@ La web está diseñada para ser moderna, accesible y fácil de navegar.
 - **Secciones Informativas**: Incluye secciones específicas para cada especialidad de la clínica con descripciones detalladas.
 - **Facilidad de Navegación**: Un menú con anclas permite una navegación rápida y sencilla de la página.
 - **Imágenes y Contenidos**: Las especialidades y tratamientos están acompañados de imágenes ilustrativas que refuerzan el contenido.
+- **Optimización SEO basico**: Configuración de etiquetas meta para mejorar la visibilidad en motores de búsqueda, Optimización de la estructura de URLs e  Investigación de Palabras Clave.
+
 
 ## Tecnologías Utilizadas
 
